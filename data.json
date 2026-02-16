@@ -1,0 +1,366 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123456",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user123",
+      "role": "employee",
+      "employeeId": 101
+    },
+    {
+      "id": 1770862660095,
+      "username": "Kelvin Loaiza",
+      "password": "1992",
+      "role": "admin",
+      "employeeId": 1770862331000,
+      "employeeName": "Kelvin",
+      "employeeCode": "5890",
+      "status": "Active"
+    },
+    {
+      "id": 1770862821407,
+      "username": "Jimena",
+      "password": "5865",
+      "role": "employee",
+      "employeeId": 1770862779004,
+      "employeeName": "Jimena",
+      "employeeCode": "5865",
+      "status": "Active"
+    }
+  ],
+  "employees": [
+    {
+      "id": 101,
+      "name": "Juan Perez",
+      "code": "EMP001",
+      "joinDate": "2023-01-15",
+      "role": "Operario"
+    },
+    {
+      "id": 102,
+      "name": "Maria Gomez",
+      "code": "EMP002",
+      "joinDate": "2023-02-20",
+      "role": "Supervisor"
+    },
+    {
+      "id": 103,
+      "name": "Carlos Ruiz",
+      "code": "EMP003",
+      "joinDate": "2023-03-10",
+      "role": "Empaquetador"
+    },
+    {
+      "id": 1770862331000,
+      "name": "Kelvin",
+      "code": "5890",
+      "joinDate": "2015-05-14",
+      "role": "Gerente Operaciones"
+    },
+    {
+      "id": 1770862779004,
+      "name": "Jimena",
+      "code": "5865",
+      "joinDate": "2017-06-14",
+      "role": "Obrero"
+    }
+  ],
+  "shifts": [
+    {
+      "employeeId": 101,
+      "date": "2026-02-01",
+      "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-02",
+      "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-07",
+      "type": "T"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-08",
+      "type": "T"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-11",
+      "type": "T"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-02",
+      "type": "N"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-06",
+      "type": "M"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-08",
+      "type": "M"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-09",
+      "type": "M"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-04",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-05",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-10",
+      "type": "N"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-02",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-03",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-04",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-08",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-09",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-10",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-06",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-08",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-10",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-02",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-01",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-14",
+      "type": "L"
+    }
+  ]
+}
