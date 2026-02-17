@@ -3,11 +3,19 @@ import { getDB, saveDB } from '@/lib/db';
 
 export async function GET(request) {
     const { searchParams } = new URL(request.url);
-    const month = searchParams.get('month'); // Format: YYYY-MM
+    const month = searchParams.get('month'); // Format: YYYY-MM (backward compatibility)
+    const startDate = searchParams.get('startDate'); // Format: YYYY-MM-DD
+    const endDate = searchParams.get('endDate'); // Format: YYYY-MM-DD
     const db = getDB();
 
     let shifts = db.shifts;
-    if (month) {
+
+    // Filtrar por rango de fechas si se proporcionan startDate y endDate
+    if (startDate && endDate) {
+        shifts = shifts.filter(s => s.date >= startDate && s.date <= endDate);
+    }
+    // De lo contrario, filtrar por mes (compatibilidad hacia atrás)
+    else if (month) {
         shifts = shifts.filter(s => s.date.startsWith(month));
     }
 

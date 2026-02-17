@@ -38,7 +38,7 @@ export default function LoginPage() {
 
         fetch('/api/auth/users')
             .then(res => res.json())
-            .then(data => { if (Array.isArray(data)) setUserList(data); })
+            .then(data => { if (Array.isArray(data)) setUserList([...new Set(data)]); })
             .catch(err => console.error("Error fetching users", err));
     }, []);
 
@@ -192,7 +192,7 @@ export default function LoginPage() {
                                     <div className="relative">
                                         <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cookie-brand h-5 w-5" />
                                         <input type="text" list="usernames" value={username} onChange={(e) => setUsername(e.target.value)} className="input-field !pl-12" placeholder="Selecciona o escribe..." required />
-                                        <datalist id="usernames">{userList.map(u => <option key={u} value={u} />)}</datalist>
+                                        <datalist id="usernames">{userList.map((u, i) => <option key={i} value={u} />)}</datalist>
                                     </div>
                                 </div>
                                 <div className="space-y-2">

@@ -5,6 +5,7 @@ import { format, startOfWeek, endOfWeek, eachDayOfInterval, isSameDay, addWeeks,
 import { es } from 'date-fns/locale';
 import { ChevronLeft, ChevronRight, Calendar, Clock, Sun, Moon, Coffee } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getCurrentWorkPeriod } from '@/lib/workPeriod';
 
 const SHIFT_ICONS = {
     'M': { icon: Sun, label: 'Mañana', color: 'text-yellow-600', bg: 'bg-yellow-50 border-yellow-200' },
@@ -29,8 +30,12 @@ export default function WeeklyCalendar({ employeeId }) {
     const fetchShifts = async () => {
         setLoading(true);
         try {
-            // Fetch all shifts for the month (simplified, ideally range based)
-            const res = await fetch(`/api/shifts?month=${format(currentDate, 'yyyy-MM')}`);
+            // Obtener el periodo laboral actual para hacer fetch correcto
+            const period = getCurrentWorkPeriod(currentDate);
+            const startStr = format(period.start, 'yyyy-MM-dd');
+            const endStr = format(period.end, 'yyyy-MM-dd');
+
+            const res = await fetch(`/api/shifts?startDate=${startStr}&endDate=${endStr}`);
             const data = await res.json();
             // Filter client side for this employee
             setShifts(data.filter(s => s.employeeId === employeeId));

@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sistema de Gestión y Publicación de Horarios (PublicarHorarios)
 
-## Getting Started
+## 📋 Descripción del Proyecto
 
-First, run the development server:
+**PublicarHorarios** es una aplicación web moderna diseñada para optimizar la gestión y distribución de horarios laborales. Su objetivo principal es reemplazar los métodos tradicionales y manuales (como el envío de PDFs por WhatsApp o impresiones físicas) por una plataforma digital centralizada, segura y accesible.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+El flujo de trabajo se centra en la eficiencia:
+1.  **Administrador**: Sube la planificación de horarios masivamente a través de archivos **Excel**. La aplicación procesa, valida y almacena esta información.
+2.  **Empleado**: Accede a la plataforma mediante credenciales seguras (Código de Empleado) y visualiza únicamente su horario asignado, eliminando confusiones y garantizando la privacidad.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologías Utilizadas
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Este proyecto utiliza un stack tecnológico de vanguardia para asegurar rendimiento, escalabilidad y una experiencia de usuario fluida (UX).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend (Cliente)
+-   **[Next.js 16 (App Router)](https://nextjs.org/)**: Framework de React para producción. Maneja el enrutado, renderizado del lado del servidor (SSR) y optimización.
+-   **[React 19](https://react.dev/)**: Librería para construir interfaces de usuario interactivas.
+-   **[Tailwind CSS v4](https://tailwindcss.com/)**: Framework de utilidad para estilos rápidos, responsivos y modernos.
+-   **[Framer Motion](https://www.framer.com/motion/)**: Biblioteca para animaciones fluidas y micro-interacciones que mejoran la experiencia del usuario.
+-   **[Lucide React](https://lucide.dev/)**: Colección de iconos ligeros y consistentes.
 
-## Learn More
+### Backend (Servidor)
+-   **Next.js API Routes**: Funciones serverless que manejan la lógica de negocio (autenticación, procesamiento de datos, CRUD de usuarios).
+-   **Node.js**: Entorno de ejecución para la lógica del servidor.
 
-To learn more about Next.js, take a look at the following resources:
+### Procesamiento de Datos
+-   **[SheetJS (xlsx)](https://docs.sheetjs.com/)**: Librería potente para leer, parsear y validar archivos Excel (.xlsx, .xls) directamente en el navegador o servidor, permitiendo la carga masiva de horarios.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Base de Datos
+-   **Estado Actual (Prototipo)**: Sistema de almacenamiento local basado en archivos JSON (`data.json`) para desarrollo rápido y pruebas de concepto.
+-   **Producción (Planificado)**: Migración a una base de datos en la nube.
+    -   *Opciones en evaluación*: **Google Firestore** (NoSQL, Escalable) o **PostgreSQL** (Relacional, Robusto via Supabase/Render).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ Arquitectura del Sistema
 
-## Deploy on Vercel
+El proyecto sigue una arquitectura **Monolítica Modular** basada en Next.js:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  **Capa de Presentación (Frontend)**:
+    -   Componentes reutilizables (`/components`) como `ShiftGrid`, `WeeklyCalendar` y `BulkUpload`.
+    -   Páginas (`/app`) separadas por roles: Dashboard de Admin y Vista de Empleado.
+    -   **Context API**: Manejo del estado global de la sesión del usuario (`AuthContext`).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2.  **Capa de Lógica de Negocio (API/Backend)**:
+    -   Endpoints RESTful en `/app/api/` que sirven como intermediarios entre el frontend y los datos.
+    -   **Middleware**: Protección de rutas para asegurar que solo usuarios autenticados y con el rol correcto accedan a ciertas áreas (ej. solo Admins en `/admin`).
+
+3.  **Flujo de Datos**:
+    -   `Excel` -> `Frontend Parser` -> `API Bulk Upload` -> `Base de Datos`.
+    -   `Login` -> `API Auth` -> `JWT/Sesión` -> `Acceso a Datos Personales`.
+
+## 🛠️ Instalación y Configuración
+
+1.  **Clonar el repositorio**:
+    ```bash
+    git clone https://github.com/kelvinL55/PublicarHorarios.git
+    cd PublicarHorarios
+    ```
+
+2.  **Instalar dependencias**:
+    ```bash
+    npm install
+    ```
+
+3.  **Ejecutar servidor de desarrollo**:
+    ```bash
+    npm run dev
+    ```
+    La aplicación estará disponible en `http://localhost:3000`.
+
+## ✨ Características Principales
+
+-   **Autenticación Segura**: Login diferenciado para Administradores y Empleados.
+-   **Carga Masiva (Bulk Upload)**: Importación de miles de registros de horarios desde Excel en segundos.
+-   **Gestión de Usuarios**: ABM (Alta, Baja, Modificación) de empleados.
+-   **Vista de Calendario**: Visualización intuitiva de turnos semanales y mensuales.
+-   **Diseño Responsivo**: Totalmente funcional en dispositivos móviles y de escritorio.
+
+---
+*Desarrollado por Kelvin.*

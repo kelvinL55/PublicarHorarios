@@ -3,7 +3,7 @@
     {
       "id": 1,
       "username": "admin",
-      "password": "123456",
+      "password": "password123",
       "role": "admin"
     },
     {
@@ -31,6 +31,526 @@
       "employeeId": 1770862779004,
       "employeeName": "Jimena",
       "employeeCode": "5865",
+      "status": "Active"
+    },
+    {
+      "id": 1771211516688,
+      "username": "maria.gomez",
+      "password": "2817",
+      "role": "employee",
+      "employeeId": 102,
+      "employeeName": "Maria Gomez",
+      "employeeCode": "EMP002",
+      "status": "Active"
+    },
+    {
+      "id": 1771211516221,
+      "username": "carlos.ruiz",
+      "password": "5216",
+      "role": "employee",
+      "employeeId": 103,
+      "employeeName": "Carlos Ruiz",
+      "employeeCode": "EMP003",
+      "status": "Active"
+    },
+    {
+      "id": 1771211524148,
+      "username": "sergio.ortiz",
+      "password": "7386",
+      "role": "employee",
+      "employeeId": 1770862779005,
+      "employeeName": "Sergio Ortiz",
+      "employeeCode": "EMP1770862779005",
+      "status": "Active"
+    },
+    {
+      "id": 1771211519120,
+      "username": "walter.gutierrez",
+      "password": "2709",
+      "role": "employee",
+      "employeeId": 1770862779006,
+      "employeeName": "Walter Gutierrez",
+      "employeeCode": "EMP1770862779006",
+      "status": "Active"
+    },
+    {
+      "id": 1771211524036,
+      "username": "andres.gutierrez",
+      "password": "6841",
+      "role": "employee",
+      "employeeId": 1770862779007,
+      "employeeName": "Andres Gutierrez",
+      "employeeCode": "EMP1770862779007",
+      "status": "Active"
+    },
+    {
+      "id": 1771211522786,
+      "username": "natalia.hernandez",
+      "password": "5919",
+      "role": "employee",
+      "employeeId": 1770862779008,
+      "employeeName": "Natalia Hernandez",
+      "employeeCode": "EMP1770862779008",
+      "status": "Active"
+    },
+    {
+      "id": 1771211518017,
+      "username": "carlos.torres",
+      "password": "5650",
+      "role": "employee",
+      "employeeId": 1770862779009,
+      "employeeName": "Carlos Torres",
+      "employeeCode": "EMP1770862779009",
+      "status": "Active"
+    },
+    {
+      "id": 1771211516557,
+      "username": "rosa.lopez",
+      "password": "2583",
+      "role": "employee",
+      "employeeId": 1770862779010,
+      "employeeName": "Rosa Lopez",
+      "employeeCode": "EMP1770862779010",
+      "status": "Active"
+    },
+    {
+      "id": 1771211522474,
+      "username": "laura.torres",
+      "password": "6488",
+      "role": "employee",
+      "employeeId": 1770862779011,
+      "employeeName": "Laura Torres",
+      "employeeCode": "EMP1770862779011",
+      "status": "Active"
+    },
+    {
+      "id": 1771211525775,
+      "username": "oscar.reyes",
+      "password": "8451",
+      "role": "employee",
+      "employeeId": 1770862779012,
+      "employeeName": "Oscar Reyes",
+      "employeeCode": "EMP1770862779012",
+      "status": "Active"
+    },
+    {
+      "id": 1771211523476,
+      "username": "manuel.hernandez",
+      "password": "7024",
+      "role": "employee",
+      "employeeId": 1770862779013,
+      "employeeName": "Manuel Hernandez",
+      "employeeCode": "EMP1770862779013",
+      "status": "Active"
+    },
+    {
+      "id": 1771211521113,
+      "username": "daniela.gomez",
+      "password": "5673",
+      "role": "employee",
+      "employeeId": 1770862779014,
+      "employeeName": "Daniela Gomez",
+      "employeeCode": "EMP1770862779014",
+      "status": "Active"
+    },
+    {
+      "id": 1771211516804,
+      "username": "oscar.rivera",
+      "password": "4206",
+      "role": "employee",
+      "employeeId": 1770862779015,
+      "employeeName": "Oscar Rivera",
+      "employeeCode": "EMP1770862779015",
+      "status": "Active"
+    },
+    {
+      "id": 1771211523813,
+      "username": "rosa.reyes",
+      "password": "9573",
+      "role": "employee",
+      "employeeId": 1770862779016,
+      "employeeName": "Rosa Reyes",
+      "employeeCode": "EMP1770862779016",
+      "status": "Active"
+    },
+    {
+      "id": 1771211521011,
+      "username": "gabriel.ramirez",
+      "password": "4935",
+      "role": "employee",
+      "employeeId": 1770862779017,
+      "employeeName": "Gabriel Ramirez",
+      "employeeCode": "EMP1770862779017",
+      "status": "Active"
+    },
+    {
+      "id": 1771211526199,
+      "username": "ulises.martinez",
+      "password": "4868",
+      "role": "employee",
+      "employeeId": 1770862779018,
+      "employeeName": "Ulises Martinez",
+      "employeeCode": "EMP1770862779018",
+      "status": "Active"
+    },
+    {
+      "id": 1771211524870,
+      "username": "julia.ortiz",
+      "password": "8036",
+      "role": "employee",
+      "employeeId": 1770862779019,
+      "employeeName": "Julia Ortiz",
+      "employeeCode": "EMP1770862779019",
+      "status": "Active"
+    },
+    {
+      "id": 1771211517674,
+      "username": "sergio.cruz",
+      "password": "2566",
+      "role": "employee",
+      "employeeId": 1770862779020,
+      "employeeName": "Sergio Cruz",
+      "employeeCode": "EMP1770862779020",
+      "status": "Active"
+    },
+    {
+      "id": 1771211524981,
+      "username": "laura.hernandez",
+      "password": "9693",
+      "role": "employee",
+      "employeeId": 1770862779021,
+      "employeeName": "Laura Hernandez",
+      "employeeCode": "EMP1770862779021",
+      "status": "Active"
+    },
+    {
+      "id": 1771211525068,
+      "username": "kevin.flores",
+      "password": "9221",
+      "role": "employee",
+      "employeeId": 1770862779022,
+      "employeeName": "Kevin Flores",
+      "employeeCode": "EMP1770862779022",
+      "status": "Active"
+    },
+    {
+      "id": 1771211522342,
+      "username": "laura.rivera",
+      "password": "4135",
+      "role": "employee",
+      "employeeId": 1770862779023,
+      "employeeName": "Laura Rivera",
+      "employeeCode": "EMP1770862779023",
+      "status": "Active"
+    },
+    {
+      "id": 1771211520453,
+      "username": "berta.gomez",
+      "password": "1997",
+      "role": "employee",
+      "employeeId": 1770862779024,
+      "employeeName": "Berta Gomez",
+      "employeeCode": "EMP1770862779024",
+      "status": "Active"
+    },
+    {
+      "id": 1771211524465,
+      "username": "gabriel.garcia",
+      "password": "2547",
+      "role": "employee",
+      "employeeId": 1770862779025,
+      "employeeName": "Gabriel Garcia",
+      "employeeCode": "EMP1770862779025",
+      "status": "Active"
+    },
+    {
+      "id": 1771211525399,
+      "username": "daniela.gutierrez",
+      "password": "3932",
+      "role": "employee",
+      "employeeId": 1770862779026,
+      "employeeName": "Daniela Gutierrez",
+      "employeeCode": "EMP1770862779026",
+      "status": "Active"
+    },
+    {
+      "id": 1771211523558,
+      "username": "laura.gutierrez",
+      "password": "3532",
+      "role": "employee",
+      "employeeId": 1770862779027,
+      "employeeName": "Laura Gutierrez",
+      "employeeCode": "EMP1770862779027",
+      "status": "Active"
+    },
+    {
+      "id": 1771211519062,
+      "username": "kevin.hernandez",
+      "password": "9840",
+      "role": "employee",
+      "employeeId": 1770862779028,
+      "employeeName": "Kevin Hernandez",
+      "employeeCode": "EMP1770862779028",
+      "status": "Active"
+    },
+    {
+      "id": 1771211519698,
+      "username": "carlos.morales",
+      "password": "8384",
+      "role": "employee",
+      "employeeId": 1770862779029,
+      "employeeName": "Carlos Morales",
+      "employeeCode": "EMP1770862779029",
+      "status": "Active"
+    },
+    {
+      "id": 1771211520062,
+      "username": "walter.chavez",
+      "password": "8132",
+      "role": "employee",
+      "employeeId": 1770862779030,
+      "employeeName": "Walter Chavez",
+      "employeeCode": "EMP1770862779030",
+      "status": "Active"
+    },
+    {
+      "id": 1771211523982,
+      "username": "beatriz.perez",
+      "password": "6409",
+      "role": "employee",
+      "employeeId": 1770862779031,
+      "employeeName": "Beatriz Perez",
+      "employeeCode": "EMP1770862779031",
+      "status": "Active"
+    },
+    {
+      "id": 1771211526054,
+      "username": "zacarias.martinez",
+      "password": "5732",
+      "role": "employee",
+      "employeeId": 1770862779032,
+      "employeeName": "Zacarias Martinez",
+      "employeeCode": "EMP1770862779032",
+      "status": "Active"
+    },
+    {
+      "id": 1771211524310,
+      "username": "quintin.cruz",
+      "password": "5513",
+      "role": "employee",
+      "employeeId": 1770862779033,
+      "employeeName": "Quintin Cruz",
+      "employeeCode": "EMP1770862779033",
+      "status": "Active"
+    },
+    {
+      "id": 1771211521805,
+      "username": "beatriz.gomez",
+      "password": "8603",
+      "role": "employee",
+      "employeeId": 1770862779034,
+      "employeeName": "Beatriz Gomez",
+      "employeeCode": "EMP1770862779034",
+      "status": "Active"
+    },
+    {
+      "id": 1771211522180,
+      "username": "hilda.ramirez",
+      "password": "3768",
+      "role": "employee",
+      "employeeId": 1770862779035,
+      "employeeName": "Hilda Ramirez",
+      "employeeCode": "EMP1770862779035",
+      "status": "Active"
+    },
+    {
+      "id": 1771211524499,
+      "username": "gabriel.cruz",
+      "password": "4505",
+      "role": "employee",
+      "employeeId": 1770862779036,
+      "employeeName": "Gabriel Cruz",
+      "employeeCode": "EMP1770862779036",
+      "status": "Active"
+    },
+    {
+      "id": 1771211517081,
+      "username": "hilda.chavez",
+      "password": "8523",
+      "role": "employee",
+      "employeeId": 1770862779037,
+      "employeeName": "Hilda Chavez",
+      "employeeCode": "EMP1770862779037",
+      "status": "Active"
+    },
+    {
+      "id": 1771211525327,
+      "username": "julia.hernandez",
+      "password": "9270",
+      "role": "employee",
+      "employeeId": 1770862779038,
+      "employeeName": "Julia Hernandez",
+      "employeeCode": "EMP1770862779038",
+      "status": "Active"
+    },
+    {
+      "id": 1771211518904,
+      "username": "oscar.gutierrez",
+      "password": "5569",
+      "role": "employee",
+      "employeeId": 1770862779039,
+      "employeeName": "Oscar Gutierrez",
+      "employeeCode": "EMP1770862779039",
+      "status": "Active"
+    },
+    {
+      "id": 1771211524414,
+      "username": "rosa.sanchez",
+      "password": "1276",
+      "role": "employee",
+      "employeeId": 1770862779040,
+      "employeeName": "Rosa Sanchez",
+      "employeeCode": "EMP1770862779040",
+      "status": "Active"
+    },
+    {
+      "id": 1771211517256,
+      "username": "kevin.rodriguez",
+      "password": "3203",
+      "role": "employee",
+      "employeeId": 1770862779041,
+      "employeeName": "Kevin Rodriguez",
+      "employeeCode": "EMP1770862779041",
+      "status": "Active"
+    },
+    {
+      "id": 1771211522825,
+      "username": "teresa.ortiz",
+      "password": "4473",
+      "role": "employee",
+      "employeeId": 1770862779042,
+      "employeeName": "Teresa Ortiz",
+      "employeeCode": "EMP1770862779042",
+      "status": "Active"
+    },
+    {
+      "id": 1771211517954,
+      "username": "eduardo.rivera",
+      "password": "9286",
+      "role": "employee",
+      "employeeId": 1770862779043,
+      "employeeName": "Eduardo Rivera",
+      "employeeCode": "EMP1770862779043",
+      "status": "Active"
+    },
+    {
+      "id": 1771211524383,
+      "username": "quintin.torres",
+      "password": "1849",
+      "role": "employee",
+      "employeeId": 1770862779044,
+      "employeeName": "Quintin Torres",
+      "employeeCode": "EMP1770862779044",
+      "status": "Active"
+    },
+    {
+      "id": 1771211521601,
+      "username": "teresa.ortiz",
+      "password": "2678",
+      "role": "employee",
+      "employeeId": 1770862779045,
+      "employeeName": "Teresa Ortiz",
+      "employeeCode": "EMP1770862779045",
+      "status": "Active"
+    },
+    {
+      "id": 1771211519645,
+      "username": "berta.cruz",
+      "password": "9256",
+      "role": "employee",
+      "employeeId": 1770862779046,
+      "employeeName": "Berta Cruz",
+      "employeeCode": "EMP1770862779046",
+      "status": "Active"
+    },
+    {
+      "id": 1771211521036,
+      "username": "natalia.gomez",
+      "password": "6143",
+      "role": "employee",
+      "employeeId": 1770862779047,
+      "employeeName": "Natalia Gomez",
+      "employeeCode": "EMP1770862779047",
+      "status": "Active"
+    },
+    {
+      "id": 1771211519212,
+      "username": "alejandro.hernandez",
+      "password": "7522",
+      "role": "employee",
+      "employeeId": 1770862779048,
+      "employeeName": "Alejandro Hernandez",
+      "employeeCode": "EMP1770862779048",
+      "status": "Active"
+    },
+    {
+      "id": 1771211520214,
+      "username": "veronica.chavez",
+      "password": "7285",
+      "role": "employee",
+      "employeeId": 1770862779049,
+      "employeeName": "Veronica Chavez",
+      "employeeCode": "EMP1770862779049",
+      "status": "Active"
+    },
+    {
+      "id": 1771211518305,
+      "username": "cesar.gutierrez",
+      "password": "9992",
+      "role": "employee",
+      "employeeId": 1770862779050,
+      "employeeName": "Cesar Gutierrez",
+      "employeeCode": "EMP1770862779050",
+      "status": "Active"
+    },
+    {
+      "id": 1771211526175,
+      "username": "fernanda.diaz",
+      "password": "3109",
+      "role": "employee",
+      "employeeId": 1770862779051,
+      "employeeName": "Fernanda Diaz",
+      "employeeCode": "EMP1770862779051",
+      "status": "Active"
+    },
+    {
+      "id": 1771211523551,
+      "username": "berta.perez",
+      "password": "8813",
+      "role": "employee",
+      "employeeId": 1770862779052,
+      "employeeName": "Berta Perez",
+      "employeeCode": "EMP1770862779052",
+      "status": "Active"
+    },
+    {
+      "id": 1771211526187,
+      "username": "hilda.morales",
+      "password": "7483",
+      "role": "employee",
+      "employeeId": 1770862779053,
+      "employeeName": "Hilda Morales",
+      "employeeCode": "EMP1770862779053",
+      "status": "Active"
+    },
+    {
+      "id": 1771211526129,
+      "username": "diana.martinez",
+      "password": "6138",
+      "role": "employee",
+      "employeeId": 1770862779054,
+      "employeeName": "Diana Martinez",
+      "employeeCode": "EMP1770862779054",
       "status": "Active"
     }
   ],
@@ -69,33 +589,408 @@
       "code": "5865",
       "joinDate": "2017-06-14",
       "role": "Obrero"
+    },
+    {
+      "id": 1770862779005,
+      "name": "Sergio Ortiz",
+      "code": "EMP1770862779005",
+      "joinDate": "2024-04-05",
+      "role": "Almacenero"
+    },
+    {
+      "id": 1770862779006,
+      "name": "Walter Gutierrez",
+      "code": "EMP1770862779006",
+      "joinDate": "2024-06-13",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779007,
+      "name": "Andres Gutierrez",
+      "code": "EMP1770862779007",
+      "joinDate": "2023-08-23",
+      "role": "Almacenero"
+    },
+    {
+      "id": 1770862779008,
+      "name": "Natalia Hernandez",
+      "code": "EMP1770862779008",
+      "joinDate": "2025-02-02",
+      "role": "Mantenimiento"
+    },
+    {
+      "id": 1770862779009,
+      "name": "Carlos Torres",
+      "code": "EMP1770862779009",
+      "joinDate": "2024-12-25",
+      "role": "Operario"
+    },
+    {
+      "id": 1770862779010,
+      "name": "Rosa Lopez",
+      "code": "EMP1770862779010",
+      "joinDate": "2024-02-06",
+      "role": "Mantenimiento"
+    },
+    {
+      "id": 1770862779011,
+      "name": "Laura Torres",
+      "code": "EMP1770862779011",
+      "joinDate": "2025-06-23",
+      "role": "Almacenero"
+    },
+    {
+      "id": 1770862779012,
+      "name": "Oscar Reyes",
+      "code": "EMP1770862779012",
+      "joinDate": "2023-07-26",
+      "role": "Almacenero"
+    },
+    {
+      "id": 1770862779013,
+      "name": "Manuel Hernandez",
+      "code": "EMP1770862779013",
+      "joinDate": "2023-09-18",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779014,
+      "name": "Daniela Gomez",
+      "code": "EMP1770862779014",
+      "joinDate": "2024-08-20",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779015,
+      "name": "Oscar Rivera",
+      "code": "EMP1770862779015",
+      "joinDate": "2024-12-08",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779016,
+      "name": "Rosa Reyes",
+      "code": "EMP1770862779016",
+      "joinDate": "2025-06-27",
+      "role": "Mantenimiento"
+    },
+    {
+      "id": 1770862779017,
+      "name": "Gabriel Ramirez",
+      "code": "EMP1770862779017",
+      "joinDate": "2025-06-08",
+      "role": "Almacenero"
+    },
+    {
+      "id": 1770862779018,
+      "name": "Ulises Martinez",
+      "code": "EMP1770862779018",
+      "joinDate": "2024-03-19",
+      "role": "Supervisor"
+    },
+    {
+      "id": 1770862779019,
+      "name": "Julia Ortiz",
+      "code": "EMP1770862779019",
+      "joinDate": "2025-02-05",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779020,
+      "name": "Sergio Cruz",
+      "code": "EMP1770862779020",
+      "joinDate": "2024-06-21",
+      "role": "Almacenero"
+    },
+    {
+      "id": 1770862779021,
+      "name": "Laura Hernandez",
+      "code": "EMP1770862779021",
+      "joinDate": "2024-11-14",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779022,
+      "name": "Kevin Flores",
+      "code": "EMP1770862779022",
+      "joinDate": "2025-02-15",
+      "role": "Supervisor"
+    },
+    {
+      "id": 1770862779023,
+      "name": "Laura Rivera",
+      "code": "EMP1770862779023",
+      "joinDate": "2025-08-06",
+      "role": "Operario"
+    },
+    {
+      "id": 1770862779024,
+      "name": "Berta Gomez",
+      "code": "EMP1770862779024",
+      "joinDate": "2023-10-24",
+      "role": "Operario"
+    },
+    {
+      "id": 1770862779025,
+      "name": "Gabriel Garcia",
+      "code": "EMP1770862779025",
+      "joinDate": "2025-03-13",
+      "role": "Supervisor"
+    },
+    {
+      "id": 1770862779026,
+      "name": "Daniela Gutierrez",
+      "code": "EMP1770862779026",
+      "joinDate": "2023-09-26",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779027,
+      "name": "Laura Gutierrez",
+      "code": "EMP1770862779027",
+      "joinDate": "2024-02-12",
+      "role": "Operario"
+    },
+    {
+      "id": 1770862779028,
+      "name": "Kevin Hernandez",
+      "code": "EMP1770862779028",
+      "joinDate": "2024-04-25",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779029,
+      "name": "Carlos Morales",
+      "code": "EMP1770862779029",
+      "joinDate": "2025-01-01",
+      "role": "Supervisor"
+    },
+    {
+      "id": 1770862779030,
+      "name": "Walter Chavez",
+      "code": "EMP1770862779030",
+      "joinDate": "2023-10-03",
+      "role": "Empaquetador"
+    },
+    {
+      "id": 1770862779031,
+      "name": "Beatriz Perez",
+      "code": "EMP1770862779031",
+      "joinDate": "2023-04-23",
+      "role": "Empaquetador"
+    },
+    {
+      "id": 1770862779032,
+      "name": "Zacarias Martinez",
+      "code": "EMP1770862779032",
+      "joinDate": "2024-06-07",
+      "role": "Operario"
+    },
+    {
+      "id": 1770862779033,
+      "name": "Quintin Cruz",
+      "code": "EMP1770862779033",
+      "joinDate": "2023-06-25",
+      "role": "Mantenimiento"
+    },
+    {
+      "id": 1770862779034,
+      "name": "Beatriz Gomez",
+      "code": "EMP1770862779034",
+      "joinDate": "2024-05-03",
+      "role": "Supervisor"
+    },
+    {
+      "id": 1770862779035,
+      "name": "Hilda Ramirez",
+      "code": "EMP1770862779035",
+      "joinDate": "2025-04-13",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779036,
+      "name": "Gabriel Cruz",
+      "code": "EMP1770862779036",
+      "joinDate": "2023-02-12",
+      "role": "Mantenimiento"
+    },
+    {
+      "id": 1770862779037,
+      "name": "Hilda Chavez",
+      "code": "EMP1770862779037",
+      "joinDate": "2024-01-02",
+      "role": "Almacenero"
+    },
+    {
+      "id": 1770862779038,
+      "name": "Julia Hernandez",
+      "code": "EMP1770862779038",
+      "joinDate": "2023-05-20",
+      "role": "Supervisor"
+    },
+    {
+      "id": 1770862779039,
+      "name": "Oscar Gutierrez",
+      "code": "EMP1770862779039",
+      "joinDate": "2024-02-01",
+      "role": "Almacenero"
+    },
+    {
+      "id": 1770862779040,
+      "name": "Rosa Sanchez",
+      "code": "EMP1770862779040",
+      "joinDate": "2023-10-02",
+      "role": "Supervisor"
+    },
+    {
+      "id": 1770862779041,
+      "name": "Kevin Rodriguez",
+      "code": "EMP1770862779041",
+      "joinDate": "2024-05-06",
+      "role": "Supervisor"
+    },
+    {
+      "id": 1770862779042,
+      "name": "Teresa Ortiz",
+      "code": "EMP1770862779042",
+      "joinDate": "2024-04-03",
+      "role": "Empaquetador"
+    },
+    {
+      "id": 1770862779043,
+      "name": "Eduardo Rivera",
+      "code": "EMP1770862779043",
+      "joinDate": "2025-12-05",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779044,
+      "name": "Quintin Torres",
+      "code": "EMP1770862779044",
+      "joinDate": "2023-07-27",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779045,
+      "name": "Teresa Ortiz",
+      "code": "EMP1770862779045",
+      "joinDate": "2025-04-01",
+      "role": "Mantenimiento"
+    },
+    {
+      "id": 1770862779046,
+      "name": "Berta Cruz",
+      "code": "EMP1770862779046",
+      "joinDate": "2023-05-12",
+      "role": "Almacenero"
+    },
+    {
+      "id": 1770862779047,
+      "name": "Natalia Gomez",
+      "code": "EMP1770862779047",
+      "joinDate": "2023-12-24",
+      "role": "Empaquetador"
+    },
+    {
+      "id": 1770862779048,
+      "name": "Alejandro Hernandez",
+      "code": "EMP1770862779048",
+      "joinDate": "2024-01-25",
+      "role": "Empaquetador"
+    },
+    {
+      "id": 1770862779049,
+      "name": "Veronica Chavez",
+      "code": "EMP1770862779049",
+      "joinDate": "2023-10-03",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779050,
+      "name": "Cesar Gutierrez",
+      "code": "EMP1770862779050",
+      "joinDate": "2025-01-22",
+      "role": "Mantenimiento"
+    },
+    {
+      "id": 1770862779051,
+      "name": "Fernanda Diaz",
+      "code": "EMP1770862779051",
+      "joinDate": "2025-01-19",
+      "role": "Operario"
+    },
+    {
+      "id": 1770862779052,
+      "name": "Berta Perez",
+      "code": "EMP1770862779052",
+      "joinDate": "2024-05-05",
+      "role": "Control de Calidad"
+    },
+    {
+      "id": 1770862779053,
+      "name": "Hilda Morales",
+      "code": "EMP1770862779053",
+      "joinDate": "2023-06-10",
+      "role": "Mantenimiento"
+    },
+    {
+      "id": 1770862779054,
+      "name": "Diana Martinez",
+      "code": "EMP1770862779054",
+      "joinDate": "2024-01-08",
+      "role": "Mantenimiento"
     }
   ],
   "shifts": [
     {
       "employeeId": 101,
-      "date": "2026-02-01",
+      "date": "2026-01-27",
       "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-01",
+      "type": "T"
     },
     {
       "employeeId": 101,
       "date": "2026-02-02",
-      "type": "M"
+      "type": "T"
     },
     {
       "employeeId": 101,
       "date": "2026-02-03",
-      "type": "M"
+      "type": "T"
     },
     {
       "employeeId": 101,
       "date": "2026-02-04",
-      "type": "M"
+      "type": "T"
     },
     {
       "employeeId": 101,
       "date": "2026-02-05",
-      "type": "L"
+      "type": "T"
     },
     {
       "employeeId": 101,
@@ -105,47 +1000,147 @@
     {
       "employeeId": 101,
       "date": "2026-02-07",
-      "type": "T"
+      "type": "L"
     },
     {
       "employeeId": 101,
       "date": "2026-02-08",
-      "type": "T"
+      "type": "N"
     },
     {
       "employeeId": 101,
       "date": "2026-02-09",
-      "type": "T"
+      "type": "N"
     },
     {
       "employeeId": 101,
       "date": "2026-02-10",
-      "type": "T"
+      "type": "N"
     },
     {
       "employeeId": 101,
       "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-23",
+      "type": "T"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-24",
+      "type": "T"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-25",
+      "type": "T"
+    },
+    {
+      "employeeId": 101,
+      "date": "2026-02-26",
       "type": "T"
     },
     {
       "employeeId": 102,
-      "date": "2026-02-01",
+      "date": "2026-01-27",
       "type": "N"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-01",
+      "type": "M"
     },
     {
       "employeeId": 102,
       "date": "2026-02-02",
-      "type": "N"
+      "type": "M"
     },
     {
       "employeeId": 102,
       "date": "2026-02-03",
-      "type": "L"
+      "type": "M"
     },
     {
       "employeeId": 102,
       "date": "2026-02-04",
-      "type": "L"
+      "type": "M"
     },
     {
       "employeeId": 102,
@@ -155,57 +1150,162 @@
     {
       "employeeId": 102,
       "date": "2026-02-06",
-      "type": "M"
+      "type": "L"
     },
     {
       "employeeId": 102,
       "date": "2026-02-07",
-      "type": "M"
+      "type": "L"
     },
     {
       "employeeId": 102,
       "date": "2026-02-08",
-      "type": "M"
+      "type": "T"
     },
     {
       "employeeId": 102,
       "date": "2026-02-09",
-      "type": "M"
+      "type": "T"
     },
     {
       "employeeId": 102,
       "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-11",
+      "type": "T"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-12",
+      "type": "T"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-15",
+      "type": "N"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-16",
+      "type": "N"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-18",
+      "type": "N"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-19",
+      "type": "N"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-25",
+      "type": "M"
+    },
+    {
+      "employeeId": 102,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-01-27",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-01-28",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-01-29",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-01-31",
       "type": "L"
     },
     {
       "employeeId": 103,
       "date": "2026-02-01",
-      "type": "T"
+      "type": "N"
     },
     {
       "employeeId": 103,
       "date": "2026-02-02",
-      "type": "T"
+      "type": "N"
     },
     {
       "employeeId": 103,
       "date": "2026-02-03",
-      "type": "T"
+      "type": "N"
     },
     {
       "employeeId": 103,
       "date": "2026-02-04",
-      "type": "T"
+      "type": "N"
     },
     {
       "employeeId": 103,
       "date": "2026-02-05",
-      "type": "T"
+      "type": "N"
     },
     {
       "employeeId": 103,
       "date": "2026-02-06",
-      "type": "T"
+      "type": "L"
     },
     {
       "employeeId": 103,
@@ -215,22 +1315,122 @@
     {
       "employeeId": 103,
       "date": "2026-02-08",
-      "type": "L"
+      "type": "M"
     },
     {
       "employeeId": 103,
       "date": "2026-02-09",
-      "type": "N"
+      "type": "M"
     },
     {
       "employeeId": 103,
       "date": "2026-02-10",
-      "type": "N"
+      "type": "M"
     },
     {
       "employeeId": 103,
       "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-12",
+      "type": "M"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-15",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-18",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-22",
       "type": "N"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-23",
+      "type": "N"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-24",
+      "type": "N"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 103,
+      "date": "2026-02-26",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-01-27",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-01-31",
+      "type": "L"
     },
     {
       "employeeId": 1770862331000,
@@ -240,22 +1440,22 @@
     {
       "employeeId": 1770862331000,
       "date": "2026-02-02",
-      "type": "N"
+      "type": "T"
     },
     {
       "employeeId": 1770862331000,
       "date": "2026-02-03",
-      "type": "N"
+      "type": "T"
     },
     {
       "employeeId": 1770862331000,
       "date": "2026-02-04",
-      "type": "N"
+      "type": "T"
     },
     {
       "employeeId": 1770862331000,
       "date": "2026-02-05",
-      "type": "L"
+      "type": "T"
     },
     {
       "employeeId": 1770862331000,
@@ -265,87 +1465,27 @@
     {
       "employeeId": 1770862331000,
       "date": "2026-02-07",
-      "type": "M"
+      "type": "L"
     },
     {
       "employeeId": 1770862331000,
       "date": "2026-02-08",
-      "type": "M"
+      "type": "N"
     },
     {
       "employeeId": 1770862331000,
       "date": "2026-02-09",
-      "type": "M"
+      "type": "N"
     },
     {
       "employeeId": 1770862331000,
       "date": "2026-02-10",
-      "type": "M"
+      "type": "N"
     },
     {
       "employeeId": 1770862331000,
       "date": "2026-02-11",
-      "type": "M"
-    },
-    {
-      "employeeId": 102,
-      "date": "2026-02-11",
-      "type": "M"
-    },
-    {
-      "employeeId": 1770862779004,
-      "date": "2026-02-06",
-      "type": "M"
-    },
-    {
-      "employeeId": 1770862779004,
-      "date": "2026-02-07",
-      "type": "M"
-    },
-    {
-      "employeeId": 1770862779004,
-      "date": "2026-02-05",
-      "type": "M"
-    },
-    {
-      "employeeId": 1770862779004,
-      "date": "2026-02-08",
       "type": "N"
-    },
-    {
-      "employeeId": 1770862779004,
-      "date": "2026-02-09",
-      "type": "N"
-    },
-    {
-      "employeeId": 1770862779004,
-      "date": "2026-02-10",
-      "type": "N"
-    },
-    {
-      "employeeId": 1770862779004,
-      "date": "2026-02-11",
-      "type": "N"
-    },
-    {
-      "employeeId": 1770862779004,
-      "date": "2026-02-04",
-      "type": "M"
-    },
-    {
-      "employeeId": 1770862779004,
-      "date": "2026-02-03",
-      "type": "M"
-    },
-    {
-      "employeeId": 1770862779004,
-      "date": "2026-02-02",
-      "type": "M"
-    },
-    {
-      "employeeId": 1770862779004,
-      "date": "2026-02-01",
-      "type": "M"
     },
     {
       "employeeId": 1770862331000,
@@ -360,6 +1500,7971 @@
     {
       "employeeId": 1770862331000,
       "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-23",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-24",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-25",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862331000,
+      "date": "2026-02-26",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-01-30",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-01-31",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-01",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-02",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-05",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-07",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-08",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-11",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-13",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-15",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-16",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-20",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-21",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779004,
+      "date": "2026-02-26",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-03",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-04",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-06",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-07",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-11",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-12",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-21",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-25",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779005,
+      "date": "2026-02-26",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-01-28",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-01-29",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-02",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-10",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-13",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-14",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-18",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-21",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779006,
+      "date": "2026-02-26",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-01-28",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-03",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-04",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-06",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-07",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-10",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-11",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-23",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-24",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779007,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-01-27",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-02",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-08",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-10",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-11",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-12",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-13",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-14",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-19",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-23",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779008,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-01-30",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-03",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-05",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-06",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-08",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-22",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-23",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779009,
+      "date": "2026-02-26",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-01-27",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-01-28",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-03",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-04",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-05",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-06",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-07",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-08",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-12",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-13",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-20",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-24",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-25",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779010,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-01-29",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-05",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-11",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-13",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-16",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-18",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-20",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-21",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779011,
+      "date": "2026-02-26",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-01-28",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-01-31",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-05",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-07",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-11",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-12",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-15",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-16",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-19",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-23",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-24",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-25",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779012,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-07",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-08",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-09",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-10",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-11",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-13",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-20",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-21",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-23",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-24",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779013,
+      "date": "2026-02-26",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-01-27",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-01-29",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-06",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-13",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-21",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779014,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-01",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-02",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-05",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-06",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-07",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-08",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-11",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-14",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-25",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779015,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-01-27",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-01-29",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-03",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-04",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-05",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-06",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-08",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-13",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-14",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-18",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-24",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779016,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-01",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-02",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-05",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-07",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-10",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-21",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-23",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779017,
+      "date": "2026-02-26",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-02",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-03",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-06",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-09",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-11",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-12",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-23",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-24",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779018,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-07",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-09",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-10",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-11",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-20",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-21",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779019,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-04",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-08",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-14",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-16",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-19",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-20",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-25",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779020,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-01-27",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-01-29",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-04",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-06",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-15",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779021,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-02",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-08",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-14",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-15",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-22",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-23",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779022,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-04",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-08",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-12",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-13",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-15",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-18",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-20",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-21",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779023,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-04",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-07",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-08",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-11",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-23",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779024,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-01-29",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-01-30",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-02",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-08",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-10",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-12",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-18",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-19",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-24",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779025,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-01-27",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-01-31",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-08",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-12",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-18",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-21",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-23",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779026,
+      "date": "2026-02-26",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-04",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-07",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-10",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-11",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-13",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-18",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-20",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-24",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779027,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-01-28",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-02",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-05",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-07",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-12",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-13",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-18",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-24",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-25",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779028,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-01",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-10",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-13",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-14",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-21",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779029,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-06",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-08",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-11",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-13",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-14",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-24",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779030,
+      "date": "2026-02-26",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-01-29",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-04",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-07",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-08",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-11",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-12",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-19",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-23",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779031,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-01-27",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-01-31",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-07",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-08",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-10",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-24",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779032,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-01-31",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-06",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-08",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-18",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-21",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779033,
+      "date": "2026-02-26",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-01-27",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-01-29",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-01-31",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-02",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-05",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779034,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-01-28",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-05",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-10",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-11",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-14",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-21",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-23",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-25",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779035,
+      "date": "2026-02-26",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-01-27",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-01-29",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-03",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-07",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-08",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-10",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-15",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-24",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-25",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779036,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-01-27",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-04",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-06",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-10",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-13",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-16",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-20",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-23",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-25",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779037,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-02",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-08",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-12",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-15",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-23",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-25",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779038,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-01-27",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-01",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-08",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-10",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-16",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-20",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-23",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-25",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779039,
+      "date": "2026-02-26",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-01-30",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-04",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-08",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-15",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-21",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-23",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-24",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779040,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-04",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-10",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-15",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-18",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-19",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-24",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779041,
+      "date": "2026-02-26",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-01-28",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-01-29",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-03",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-07",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-08",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-10",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-14",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-21",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779042,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-01-27",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-01-30",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-01",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-05",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-06",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-11",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-13",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-14",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-20",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-21",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779043,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-02",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-05",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-11",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-12",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-13",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-18",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-20",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779044,
+      "date": "2026-02-26",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-03",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-04",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-08",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-09",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-14",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-15",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-19",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-20",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779045,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-01-30",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-01-31",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-01",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-05",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-14",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-15",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-16",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-17",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-20",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-22",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-24",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-25",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779046,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-01-27",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-01-28",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-01-31",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-01",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-07",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-13",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-16",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-21",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-22",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-25",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779047,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-05",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-08",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-09",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-13",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-15",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-21",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-25",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779048,
+      "date": "2026-02-26",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-01-27",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-01-28",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-01-29",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-03",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-04",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-05",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-06",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-12",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-13",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-16",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-20",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-21",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-22",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-23",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779049,
+      "date": "2026-02-26",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-01-28",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-03",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-04",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-06",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-08",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-10",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-18",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-22",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-25",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779050,
+      "date": "2026-02-26",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-01-27",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-01-28",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-01-30",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-01-31",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-07",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-09",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-14",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-15",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-16",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-19",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-20",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-22",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-23",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-24",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779051,
+      "date": "2026-02-26",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-01-27",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-01-28",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-01-30",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-01",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-02",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-04",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-05",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-07",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-08",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-09",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-11",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-12",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-13",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-14",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-15",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-16",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-17",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-18",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-19",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-20",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-22",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-23",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-25",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779052,
+      "date": "2026-02-26",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-01-27",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-01-29",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-01-30",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-01-31",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-03",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-04",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-05",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-06",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-07",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-08",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-09",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-11",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-12",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-13",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-15",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-16",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-17",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-18",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-20",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-24",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779053,
+      "date": "2026-02-26",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-01-27",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-01-28",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-01-29",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-01-30",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-01-31",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-01",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-02",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-03",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-04",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-05",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-06",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-07",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-08",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-09",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-10",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-11",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-12",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-13",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-14",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-15",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-16",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-17",
+      "type": "T"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-18",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-19",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-20",
+      "type": "N"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-21",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-22",
+      "type": "M"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-23",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-24",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-25",
+      "type": "L"
+    },
+    {
+      "employeeId": 1770862779054,
+      "date": "2026-02-26",
       "type": "L"
     }
   ]
