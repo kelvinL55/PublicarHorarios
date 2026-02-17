@@ -100,6 +100,7 @@ export default function UserManagement() {
                 <table className="w-full text-left border-collapse">
                     <thead className="bg-gray-50 text-gray-500 text-xs uppercase">
                         <tr>
+                            <th className="p-4 w-12 text-center">#</th>
                             <th className="p-4">Usuario</th>
                             <th className="p-4">Empleado</th>
                             <th className="p-4">Rol</th>
@@ -108,8 +109,9 @@ export default function UserManagement() {
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-100">
-                        {users.map(user => (
+                        {users.map((user, index) => (
                             <tr key={user.id} className="hover:bg-gray-50">
+                                <td className="p-4 text-center text-gray-400 font-mono text-xs">{index + 1}</td>
                                 <td className="p-4 font-medium text-gray-900">{user.username}</td>
                                 <td className="p-4 text-gray-600">{user.employeeName || 'N/A'} <span className="text-xs text-gray-400">({user.employeeCode})</span></td>
                                 <td className="p-4">

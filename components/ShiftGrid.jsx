@@ -1,34 +1,56 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Save, Loader2 } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { ChevronLeft, ChevronRight, Save, Loader2, Settings, ChevronsLeft, ChevronsRight, UserPlus } from 'lucide-react';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { getCurrentWorkPeriod, getWorkPeriodDates, navigateWorkPeriod, calculateWorkStatistics } from '@/lib/workPeriod';
+import ScheduleConfigModal from './ScheduleConfigModal';
 
-const SHIFT_TYPES = {
-    'M': { label: 'Mañana', color: 'bg-yellow-100 text-yellow-800 border-yellow-300' },
-    'T': { label: 'Tarde', color: 'bg-orange-100 text-orange-800 border-orange-300' },
-    'N': { label: 'Noche', color: 'bg-indigo-900 text-white border-indigo-700' },
-    'L': { label: 'Libre', color: 'bg-green-100 text-green-800 border-green-300' },
-    '': { label: '-', color: 'bg-gray-50' }
-};
-
-export default function ShiftGrid() {
+export default function ShiftGrid({ onAddEmployee }) {
     // Inicializar con el periodo laboral actual
     const initialPeriod = getCurrentWorkPeriod();
     const [displayMonth, setDisplayMonth] = useState(initialPeriod.displayMonth);
     const [employees, setEmployees] = useState([]);
     const [shifts, setShifts] = useState([]);
+    const [scheduleTypes, setScheduleTypes] = useState([]);
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
+    const [isConfigOpen, setIsConfigOpen] = useState(false);
+
+    // State for dropdown popover
+    const [activeCell, setActiveCell] = useState(null); // { employeeId, date, rect }
+
+    const scrollContainerRef = useRef(null);
 
     // Obtener fechas del periodo laboral (27 al 26)
     const periodDates = getWorkPeriodDates(displayMonth.getFullYear(), displayMonth.getMonth());
 
     useEffect(() => {
         fetchData();
+        fetchScheduleTypes();
     }, [displayMonth]);
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (activeCell && !e.target.closest('.shift-dropdown')) {
+                setActiveCell(null);
+            }
+        };
+        document.addEventListener('click', handleClickOutside);
+        return () => document.removeEventListener('click', handleClickOutside);
+    }, [activeCell]);
+
+    const fetchScheduleTypes = async () => {
+        try {
+            const res = await fetch('/api/schedule-types');
+            const data = await res.json();
+            setScheduleTypes(data);
+        } catch (err) {
+            console.error("Error fetching schedule types:", err);
+        }
+    };
 
     const fetchData = async () => {
         setLoading(true);
@@ -38,14 +60,28 @@ export default function ShiftGrid() {
             const startStr = format(period.start, 'yyyy-MM-dd');
             const endStr = format(period.end, 'yyyy-MM-dd');
 
-            const [empRes, shiftRes] = await Promise.all([
+            const [empRes, shiftRes, userRes] = await Promise.all([
                 fetch('/api/employees'),
-                fetch(`/api/shifts?startDate=${startStr}&endDate=${endStr}`)
+                fetch(`/api/shifts?startDate=${startStr}&endDate=${endStr}`),
+                fetch('/api/users')
             ]);
             const empData = await empRes.json();
             const shiftData = await shiftRes.json();
+            const userData = await userRes.json();
 
-            setEmployees(empData || []);
+            // Merge status from users to employees
+            const mergedEmployees = (empData || []).map(emp => {
+                const user = (userData || []).find(u => u.employeeCode === emp.code || u.employeeId === emp.id);
+                return { ...emp, status: user?.status || 'Active' };
+            });
+
+            // Sort: Active first, then Inactive
+            mergedEmployees.sort((a, b) => {
+                if (a.status === b.status) return a.name.localeCompare(b.name);
+                return a.status === 'Inactive' ? 1 : -1;
+            });
+
+            setEmployees(mergedEmployees);
             setShifts(shiftData || []);
         } catch (err) {
             console.error("Error fetching data:", err);
@@ -59,23 +95,44 @@ export default function ShiftGrid() {
         return shifts.find(s => s.employeeId === employeeId && s.date === dateStr)?.type || '';
     };
 
-    const handleCellClick = (employeeId, date) => {
-        const dateStr = format(date, 'yyyy-MM-dd');
-        const currentType = getShift(employeeId, date);
+    const getShiftStyle = (typeCode) => {
+        if (typeCode === 'E') return 'bg-gray-200 text-gray-800 border-gray-400';
+        const type = scheduleTypes.find(t => t.code === typeCode);
+        return type ? type.color : 'bg-gray-50'; // Default gray
+    };
 
-        // Cycle through types: '' -> M -> T -> N -> L -> ''
-        const types = ['', 'M', 'T', 'N', 'L'];
-        const nextIndex = (types.indexOf(currentType) + 1) % types.length;
-        const nextType = types[nextIndex];
+    const handleCellClick = (e, employeeId, date) => {
+        e.stopPropagation();
 
-        // Optimistic update
+        // Check if employee is inactive
+        const employee = employees.find(e => e.id === employeeId);
+        // We will handle restriction in the dropdown render or here?
+        // User said: "only allow me to assign... E". 
+        // Let's open the dropdown but it will only show 'E' if inactive.
+
+        const rect = e.currentTarget.getBoundingClientRect();
+        setActiveCell({
+            employeeId,
+            date: format(date, 'yyyy-MM-dd'),
+            top: rect.bottom + window.scrollY,
+            left: rect.left + window.scrollX,
+            isInactive: employee?.status === 'Inactive'
+        });
+    };
+
+    const handleSelectShift = (typeCode) => {
+        if (!activeCell) return;
+
+        const { employeeId, date } = activeCell;
+
         setShifts(prev => {
-            const filtered = prev.filter(s => !(s.employeeId === employeeId && s.date === dateStr));
-            if (nextType) {
-                return [...filtered, { employeeId, date: dateStr, type: nextType }];
+            const filtered = prev.filter(s => !(s.employeeId === employeeId && s.date === date));
+            if (typeCode) {
+                return [...filtered, { employeeId, date, type: typeCode }];
             }
             return filtered;
         });
+        setActiveCell(null);
     };
 
     const saveChanges = async () => {
@@ -94,21 +151,53 @@ export default function ShiftGrid() {
         }
     };
 
+    const saveScheduleConfig = async (newTypes) => {
+        try {
+            const res = await fetch('/api/schedule-types', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newTypes)
+            });
+            if (res.ok) {
+                setScheduleTypes(newTypes);
+            } else {
+                alert("Error al guardar configuración");
+            }
+        } catch (err) {
+            console.error("Error saving config:", err);
+            alert("Error de conexión");
+        }
+    };
+
     const changeMonth = (direction) => {
         const newDisplayMonth = navigateWorkPeriod(displayMonth, direction);
         setDisplayMonth(newDisplayMonth);
     };
 
+    const scroll = (direction) => {
+        if (scrollContainerRef.current) {
+            const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+            if (direction === 'start') {
+                scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                scrollContainerRef.current.scrollTo({ left: scrollWidth, behavior: 'smooth' });
+            }
+        }
+    };
+
     if (loading) return <div className="p-8 text-center flex justify-center"><Loader2 className="animate-spin" /></div>;
 
     return (
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-cookie-light">
+        <div className="bg-white rounded-xl shadow-lg border border-cookie-light relative">
             {/* Controls */}
-            <div className="p-4 flex justify-between items-center bg-cookie-cream border-b border-cookie-light">
+            <div className="p-4 flex flex-col md:flex-row justify-between items-center gap-4 bg-cookie-cream border-b border-cookie-light">
                 <div className="flex items-center gap-4">
                     <div>
-                        <h2 className="text-xl font-bold text-cookie-dark capitalize">
+                        <h2 className="text-xl font-bold text-cookie-dark capitalize flex items-center gap-2">
                             {format(displayMonth, 'MMMM yyyy', { locale: es })}
+                            <span className="text-sm font-normal text-gray-500 bg-white px-2 py-0.5 rounded-full border border-gray-200">
+                                Total: {employees.length}
+                            </span>
                         </h2>
                         <p className="text-xs text-gray-500">
                             Del {format(periodDates[0], 'd MMM', { locale: es })} al {format(periodDates[periodDates.length - 1], 'd MMM', { locale: es })}
@@ -119,80 +208,178 @@ export default function ShiftGrid() {
                         <button onClick={() => changeMonth(1)} className="p-1 hover:bg-white rounded"><ChevronRight /></button>
                     </div>
                 </div>
-                <button
-                    onClick={saveChanges}
-                    disabled={saving}
-                    className="bg-cookie-brand text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-cookie-dark disabled:opacity-50"
+
+                <div className="flex gap-3">
+                    {onAddEmployee && (
+                        <button
+                            onClick={onAddEmployee}
+                            className="px-3 py-2 text-sm bg-white text-cookie-brand border border-cookie-brand hover:bg-cookie-brand hover:text-white flex items-center gap-2 rounded-lg transition-colors shadow-sm"
+                        >
+                            <UserPlus className="w-4 h-4" />
+                            <span className="hidden sm:inline">Nuevo Empleado</span>
+                        </button>
+                    )}
+                    <button
+                        onClick={() => setIsConfigOpen(true)}
+                        className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900 flex items-center gap-2 hover:bg-gray-100 rounded-lg transition-colors"
+                    >
+                        <Settings className="w-4 h-4" />
+                        <span className="hidden sm:inline">Configurar Horarios</span>
+                    </button>
+                    <button
+                        onClick={saveChanges}
+                        disabled={saving}
+                        className="bg-cookie-brand text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-cookie-dark disabled:opacity-50 shadow-sm"
+                    >
+                        {saving ? <Loader2 className="animate-spin h-4 w-4" /> : <Save className="h-4 w-4" />}
+                        <span className="hidden sm:inline">Guardar Cambios</span>
+                    </button>
+                </div>
+            </div>
+
+            {/* Config Modal */}
+            <ScheduleConfigModal
+                isOpen={isConfigOpen}
+                onClose={() => setIsConfigOpen(false)}
+                scheduleTypes={scheduleTypes}
+                onSave={saveScheduleConfig}
+            />
+
+            {/* Grid Container with Sticky Scrollbar logic */}
+            <div className="relative">
+                {/* Scroll Controls */}
+                <div className="absolute top-0 right-0 h-full flex flex-col justify-center pointer-events-none z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                    {/* Could add floating scroll buttons here purely for visual cue if needed */}
+                </div>
+
+                <div
+                    ref={scrollContainerRef}
+                    className="overflow-x-auto max-h-[500px] relative scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent"
                 >
-                    {saving ? <Loader2 className="animate-spin h-4 w-4" /> : <Save className="h-4 w-4" />}
-                    Guardar Cambios
-                </button>
-            </div>
-
-            {/* Grid */}
-            <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
-                    <thead>
-                        <tr>
-                            <th className="p-2 text-left min-w-[150px] sticky left-0 bg-cookie-cream z-10 border-b border-r border-cookie-light">Empleado</th>
-                            {periodDates.map(day => (
-                                <th key={day.toString()} className="p-1 min-w-[40px] text-center text-xs font-normal border-b border-cookie-light">
-                                    <div className="font-bold">{format(day, 'd')}</div>
-                                    <div className="text-gray-500">{format(day, 'EEEEE', { locale: es })}</div>
+                    <table className="w-full border-collapse">
+                        <thead className="sticky top-0 z-20 bg-cookie-cream shadow-sm">
+                            <tr>
+                                <th className="p-2 text-center w-10 sticky left-0 z-30 bg-cookie-cream border-b border-r border-cookie-light">#</th>
+                                <th className="p-2 text-left min-w-[200px] sticky left-10 z-30 bg-cookie-cream border-b border-r border-cookie-light shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
+                                    <div className="flex justify-between items-center">
+                                        <span>Empleado</span>
+                                        <div className="flex gap-1">
+                                            <button onClick={() => scroll('start')} title="Ir al inicio" className="p-1 hover:bg-gray-200 rounded text-gray-500"><ChevronsLeft className="w-4 h-4" /></button>
+                                            <button onClick={() => scroll('end')} title="Ir al final" className="p-1 hover:bg-gray-200 rounded text-gray-500"><ChevronsRight className="w-4 h-4" /></button>
+                                        </div>
+                                    </div>
                                 </th>
-                            ))}
-                            {/* Columnas de estadísticas */}
-                            <th className="p-2 text-center text-xs font-semibold border-b border-l-2 border-cookie-light bg-gray-50">Total<br />Días</th>
-                            <th className="p-2 text-center text-xs font-semibold border-b border-cookie-light bg-gray-50">Días<br />Lab.</th>
-                            <th className="p-2 text-center text-xs font-semibold border-b border-cookie-light bg-gray-50">Días<br />Trab.</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {employees.map(emp => {
-                            // Calcular estadísticas para este empleado
-                            const employeeShifts = shifts.filter(s => s.employeeId === emp.id);
-                            const stats = calculateWorkStatistics(employeeShifts, periodDates);
+                                {periodDates.map(day => (
+                                    <th key={day.toString()} className="p-1 min-w-[44px] text-center text-xs font-normal border-b border-cookie-light bg-cookie-cream">
+                                        <div className="font-bold">{format(day, 'd')}</div>
+                                        <div className="text-gray-500 capitalize">{format(day, 'EEE', { locale: es })}</div>
+                                    </th>
+                                ))}
+                                {/* Columnas de estadísticas */}
+                                <th className="p-2 text-center text-xs font-semibold border-b border-l-2 border-cookie-light bg-gray-50 min-w-[60px]">Total<br />Días</th>
+                                <th className="p-2 text-center text-xs font-semibold border-b border-cookie-light bg-gray-50 min-w-[60px]">Días<br />Lab.</th>
+                                <th className="p-2 text-center text-xs font-semibold border-b border-cookie-light bg-gray-50 min-w-[60px]">Días<br />Trab.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {employees.map((emp, index) => {
+                                // Calcular estadísticas para este empleado
+                                const employeeShifts = shifts.filter(s => s.employeeId === emp.id);
+                                const stats = calculateWorkStatistics(employeeShifts, periodDates);
+                                const isInactive = emp.status === 'Inactive';
 
-                            return (
-                                <tr key={emp.id} className="hover:bg-gray-50">
-                                    <td className="p-2 border-r border-cookie-light sticky left-0 bg-white font-medium text-sm truncate max-w-[150px]">
-                                        {emp.name}
-                                        <div className="text-xs text-gray-400">{emp.code}</div>
-                                    </td>
-                                    {periodDates.map(day => {
-                                        const type = getShift(emp.id, day);
-                                        const style = SHIFT_TYPES[type] || SHIFT_TYPES[''];
-                                        return (
-                                            <td
-                                                key={day.toString()}
-                                                onClick={() => handleCellClick(emp.id, day)}
-                                                className="p-1 text-center cursor-pointer border border-gray-100 hover:brightness-95 transition-all"
-                                            >
-                                                <div className={`w-8 h-8 mx-auto rounded-md flex items-center justify-center text-xs font-bold border ${style.color}`}>
-                                                    {type}
-                                                </div>
-                                            </td>
-                                        );
-                                    })}
-                                    {/* Columnas de estadísticas */}
-                                    <td className="p-2 text-center font-semibold border-l-2 border-cookie-light bg-gray-50">{stats.totalDays}</td>
-                                    <td className="p-2 text-center font-semibold bg-blue-50">{stats.workableDays}</td>
-                                    <td className="p-2 text-center font-semibold bg-green-50">{stats.workingDays}</td>
-                                </tr>
-                            );
-                        })}
-                    </tbody>
-                </table>
+                                return (
+                                    <tr key={emp.id} className={`transition-colors ${isInactive ? 'bg-gray-100 opacity-75 grayscale' : 'hover:bg-gray-50'}`}>
+                                        <td className="p-2 text-center text-xs font-mono text-gray-400 sticky left-0 z-10 bg-inherit border-r border-cookie-light border-b border-gray-100">
+                                            {index + 1}
+                                        </td>
+                                        <td className="p-2 border-r border-cookie-light sticky left-10 z-10 bg-inherit font-medium text-sm border-b border-gray-100 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
+                                            <div className="truncate max-w-[180px] font-semibold text-gray-700">
+                                                {emp.name}
+                                                {isInactive && <span className="ml-2 text-[10px] bg-gray-200 text-gray-600 px-1 rounded border border-gray-300">EX</span>}
+                                            </div>
+                                            <div className="text-xs text-gray-400">{emp.code}</div>
+                                        </td>
+                                        {periodDates.map(day => {
+                                            const typeCode = getShift(emp.id, day);
+                                            const colorClass = getShiftStyle(typeCode);
+                                            return (
+                                                <td
+                                                    key={day.toString()}
+                                                    onClick={(e) => handleCellClick(e, emp.id, day)}
+                                                    className="p-1 text-center cursor-pointer border border-gray-100 hover:bg-black/5 transition-all relative"
+                                                >
+                                                    <div className={`w-8 h-8 mx-auto rounded-md flex items-center justify-center text-xs font-bold border-2 shadow-sm ${colorClass} transition-transform hover:scale-105`}>
+                                                        {typeCode}
+                                                    </div>
+                                                </td>
+                                            );
+                                        })}
+                                        {/* Columnas de estadísticas */}
+                                        <td className="p-2 text-center font-semibold border-l-2 border-cookie-light bg-gray-50 border-b text-sm">{stats.totalDays}</td>
+                                        <td className="p-2 text-center font-semibold bg-blue-50 border-b border-blue-100 text-blue-800 text-sm">{stats.workableDays}</td>
+                                        <td className="p-2 text-center font-semibold bg-green-50 border-b border-green-100 text-green-800 text-sm">{stats.workingDays}</td>
+                                    </tr>
+                                );
+                            })}
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
+            {/* Dropdown Popover */}
+            {activeCell && (
+                <div
+                    className="fixed z-50 bg-white rounded-lg shadow-xl border border-gray-200 p-2 grid grid-cols-2 gap-2 w-64 shift-dropdown animate-in fade-in zoom-in-95 duration-100"
+                    style={{
+                        top: Math.min(activeCell.top + 5, window.innerHeight - 200), // Prevent going offscreen
+                        left: Math.min(activeCell.left - 100, window.innerWidth - 260)
+                    }}
+                >
+                    <button
+                        onClick={() => handleSelectShift('')}
+                        className="p-2 rounded hover:bg-gray-100 text-gray-500 text-sm font-medium border border-dashed border-gray-300 col-span-2 text-center"
+                    >
+                        Limpiar Turno
+                    </button>
+
+                    {activeCell.isInactive ? (
+                        <button
+                            onClick={() => handleSelectShift('E')}
+                            className="p-2 rounded border text-left flex items-center gap-2 hover:brightness-95 transition-all bg-gray-200 text-gray-800 border-gray-400 col-span-2"
+                        >
+                            <span className="font-bold w-6 text-center">E</span>
+                            <span className="text-xs truncate">Cesado (Ex-Empleado)</span>
+                        </button>
+                    ) : (
+                        scheduleTypes.map(type => (
+                            <button
+                                key={type.code}
+                                onClick={() => handleSelectShift(type.code)}
+                                className={`p-2 rounded border text-left flex items-center gap-2 hover:brightness-95 transition-all ${type.color}`}
+                            >
+                                <span className="font-bold w-6 text-center">{type.code}</span>
+                                <span className="text-xs truncate">{type.label}</span>
+                            </button>
+                        ))
+                    )}
+                </div>
+            )}
 
             {/* Legend */}
-            <div className="p-4 bg-gray-50 flex gap-4 text-sm border-t border-cookie-light">
-                {Object.entries(SHIFT_TYPES).filter(([k]) => k).map(([key, val]) => (
-                    <div key={key} className="flex items-center gap-2">
-                        <div className={`w-4 h-4 rounded border ${val.color}`}></div>
-                        <span>{val.label}</span>
+            <div className="p-4 bg-gray-50 flex flex-wrap gap-4 text-sm border-t border-cookie-light">
+                {scheduleTypes.map(type => (
+                    <div key={type.code} className="flex items-center gap-2">
+                        <div className={`w-6 h-6 rounded flex items-center justify-center text-xs font-bold border ${type.color}`}>
+                            {type.code}
+                        </div>
+                        <span className="text-gray-600">{type.label}</span>
                     </div>
                 ))}
+                <div className="flex items-center gap-2 opacity-75">
+                    <div className="w-6 h-6 rounded flex items-center justify-center text-xs font-bold border bg-gray-200 text-gray-800 border-gray-400">E</div>
+                    <span className="text-gray-600">Cesado</span>
+                </div>
             </div>
         </div>
     );

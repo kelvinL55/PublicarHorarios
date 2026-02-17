@@ -1,4 +1,31 @@
 {
+  "scheduleTypes": [
+    {
+      "code": "D",
+      "label": "Dia",
+      "color": "bg-yellow-100 text-yellow-800 border-yellow-300"
+    },
+    {
+      "code": "T",
+      "label": "Tarde",
+      "color": "bg-orange-100 text-orange-800 border-orange-300"
+    },
+    {
+      "code": "N",
+      "label": "Noche",
+      "color": "bg-indigo-900 text-white border-indigo-700"
+    },
+    {
+      "code": "L",
+      "label": "Libre",
+      "color": "bg-gray-100 text-gray-800 border-gray-300"
+    },
+    {
+      "code": "M",
+      "label": "Mañana",
+      "color": "bg-green-100 text-green-800 border-green-300"
+    }
+  ],
   "users": [
     {
       "id": 1,
@@ -81,7 +108,7 @@
       "employeeId": 1770862779007,
       "employeeName": "Andres Gutierrez",
       "employeeCode": "EMP1770862779007",
-      "status": "Active"
+      "status": "Inactive"
     },
     {
       "id": 1771211522786,
@@ -995,12 +1022,12 @@
     {
       "employeeId": 101,
       "date": "2026-02-06",
-      "type": "L"
+      "type": "D"
     },
     {
       "employeeId": 101,
       "date": "2026-02-07",
-      "type": "L"
+      "type": "M"
     },
     {
       "employeeId": 101,
@@ -1030,7 +1057,7 @@
     {
       "employeeId": 101,
       "date": "2026-02-13",
-      "type": "L"
+      "type": "T"
     },
     {
       "employeeId": 101,
@@ -1045,7 +1072,7 @@
     {
       "employeeId": 101,
       "date": "2026-02-16",
-      "type": "M"
+      "type": "L"
     },
     {
       "employeeId": 101,
@@ -1130,7 +1157,7 @@
     {
       "employeeId": 102,
       "date": "2026-02-02",
-      "type": "M"
+      "type": "N"
     },
     {
       "employeeId": 102,
@@ -1150,7 +1177,7 @@
     {
       "employeeId": 102,
       "date": "2026-02-06",
-      "type": "L"
+      "type": "D"
     },
     {
       "employeeId": 102,
@@ -1920,7 +1947,7 @@
     {
       "employeeId": 1770862779006,
       "date": "2026-02-05",
-      "type": "L"
+      "type": "D"
     },
     {
       "employeeId": 1770862779006,

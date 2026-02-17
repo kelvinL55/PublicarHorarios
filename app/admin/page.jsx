@@ -12,6 +12,7 @@ export default function AdminPage() {
     const { logout, user } = useAuth();
     const [activeTab, setActiveTab] = useState('shifts'); // shifts, users, bulk
     const [refreshKey, setRefreshKey] = useState(0);
+    const [isEmployeeModalOpen, setIsEmployeeModalOpen] = useState(false);
 
     const handleRefresh = () => {
         setRefreshKey(old => old + 1);
@@ -71,12 +72,15 @@ export default function AdminPage() {
 
                 {activeTab === 'shifts' && (
                     <div className="animate-in fade-in duration-300 space-y-8">
-                        <section>
-                            <EmployeeManager onEmployeeAdded={handleRefresh} />
-                        </section>
-                        <section>
-                            <ShiftGrid key={refreshKey} />
-                        </section>
+                        <ShiftGrid
+                            key={refreshKey}
+                            onAddEmployee={() => setIsEmployeeModalOpen(true)}
+                        />
+                        <EmployeeManager
+                            isOpen={isEmployeeModalOpen}
+                            onClose={() => setIsEmployeeModalOpen(false)}
+                            onEmployeeAdded={handleRefresh}
+                        />
                     </div>
                 )}
 
