@@ -64,13 +64,26 @@ export default function ScheduleConfigModal({ isOpen, onClose, scheduleTypes, on
     ];
 
     const handleDownloadTemplate = () => {
-        const templateData = [
-            { CODIGO: 'X', DESCRIPCION: 'Ejemplo Extra', COLOR: 'bg-purple-100 text-purple-800 border-purple-300' }
+        // Usar los tipos actuales si existen, de lo contrario usar ejemplos por defecto
+        const hasData = types.length > 0 && types.some(t => t.code || t.label);
+
+        const effectiveTypes = hasData ? types : [
+            { code: 'M', label: 'Mañana', color: 'bg-yellow-100 text-yellow-800 border-yellow-300' },
+            { code: 'T', label: 'Tarde', color: 'bg-orange-100 text-orange-800 border-orange-300' },
+            { code: 'N', label: 'Noche', color: 'bg-indigo-900 text-white border-indigo-700' },
+            { code: 'L', label: 'Libre', color: 'bg-gray-100 text-gray-800 border-gray-300' }
         ];
+
+        const templateData = effectiveTypes.map(t => ({
+            CODIGO: t.code || '',
+            DESCRIPCION: t.label || '',
+            COLOR: t.color || ''
+        }));
+
         const ws = XLSX.utils.json_to_sheet(templateData);
         const wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Plantilla");
-        XLSX.writeFile(wb, "plantilla_horarios.xlsx");
+        XLSX.utils.book_append_sheet(wb, ws, "Configuración de Turnos");
+        XLSX.writeFile(wb, "plantilla_configuracion_horarios.xlsx");
     };
 
     const handleFileUpload = (e) => {
@@ -93,7 +106,7 @@ export default function ScheduleConfigModal({ isOpen, onClose, scheduleTypes, on
                 color: row.COLOR || 'bg-gray-100 text-gray-800 border-gray-300'
             })).filter(t => t.code !== '??');
 
-            setTypes(prev => [...prev, ...newTypes]);
+            setTypes(newTypes);
         };
         reader.readAsBinaryString(file);
     };

@@ -190,49 +190,49 @@ export default function ShiftGrid({ onAddEmployee }) {
     return (
         <div className="bg-white rounded-xl shadow-lg border border-cookie-light relative">
             {/* Controls */}
-            <div className="p-4 flex flex-col md:flex-row justify-between items-center gap-4 bg-cookie-cream border-b border-cookie-light">
-                <div className="flex items-center gap-4">
-                    <div>
-                        <h2 className="text-xl font-bold text-cookie-dark capitalize flex items-center gap-2">
+            <div className="p-2 md:p-4 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 bg-cookie-cream border-b border-cookie-light">
+                <div className="flex items-center justify-between w-full md:w-auto gap-4">
+                    <div className="min-w-0">
+                        <h2 className="text-lg md:text-xl font-bold text-cookie-dark capitalize flex items-center gap-2 truncate">
                             {format(displayMonth, 'MMMM yyyy', { locale: es })}
-                            <span className="text-sm font-normal text-gray-500 bg-white px-2 py-0.5 rounded-full border border-gray-200">
-                                Total: {employees.length}
+                            <span className="hidden xs:inline-block text-[10px] md:text-sm font-normal text-gray-500 bg-white px-1.5 md:px-2 py-0.5 rounded-full border border-gray-200">
+                                {employees.length}
                             </span>
                         </h2>
-                        <p className="text-xs text-gray-500">
-                            Del {format(periodDates[0], 'd MMM', { locale: es })} al {format(periodDates[periodDates.length - 1], 'd MMM', { locale: es })}
+                        <p className="text-[10px] md:text-xs text-gray-500">
+                            {format(periodDates[0], 'd MMM', { locale: es })} - {format(periodDates[periodDates.length - 1], 'd MMM', { locale: es })}
                         </p>
                     </div>
-                    <div className="flex gap-2">
-                        <button onClick={() => changeMonth(-1)} className="p-1 hover:bg-white rounded"><ChevronLeft /></button>
-                        <button onClick={() => changeMonth(1)} className="p-1 hover:bg-white rounded"><ChevronRight /></button>
+                    <div className="flex gap-1 md:gap-2 shrink-0">
+                        <button onClick={() => changeMonth(-1)} className="p-1 md:p-1.5 hover:bg-white rounded transition-colors"><ChevronLeft size={18} /></button>
+                        <button onClick={() => changeMonth(1)} className="p-1 md:p-1.5 hover:bg-white rounded transition-colors"><ChevronRight size={18} /></button>
                     </div>
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex gap-2 w-full md:w-auto justify-end">
                     {onAddEmployee && (
                         <button
                             onClick={onAddEmployee}
-                            className="px-3 py-2 text-sm bg-white text-cookie-brand border border-cookie-brand hover:bg-cookie-brand hover:text-white flex items-center gap-2 rounded-lg transition-colors shadow-sm"
+                            className="flex-1 md:flex-none px-2 md:px-3 py-1.5 md:py-2 text-[11px] md:text-sm bg-white text-cookie-brand border border-cookie-brand hover:bg-cookie-brand hover:text-white flex items-center justify-center gap-1.5 md:gap-2 rounded-lg transition-all shadow-sm"
                         >
-                            <UserPlus className="w-4 h-4" />
-                            <span className="hidden sm:inline">Nuevo Empleado</span>
+                            <UserPlus className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                            <span className="md:inline">Empleado</span>
                         </button>
                     )}
                     <button
                         onClick={() => setIsConfigOpen(true)}
-                        className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900 flex items-center gap-2 hover:bg-gray-100 rounded-lg transition-colors"
+                        className="flex-1 md:flex-none px-2 md:px-3 py-1.5 md:py-2 text-[11px] md:text-sm text-gray-600 hover:text-gray-900 flex items-center justify-center gap-1.5 md:gap-2 hover:bg-gray-100 rounded-lg transition-all"
                     >
-                        <Settings className="w-4 h-4" />
-                        <span className="hidden sm:inline">Configurar Horarios</span>
+                        <Settings className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                        <span className="md:inline">Horarios</span>
                     </button>
                     <button
                         onClick={saveChanges}
                         disabled={saving}
-                        className="bg-cookie-brand text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-cookie-dark disabled:opacity-50 shadow-sm"
+                        className="flex-1 md:flex-none bg-cookie-brand text-white px-2 md:px-4 py-1.5 md:py-2 text-[11px] md:text-sm rounded-lg flex items-center justify-center gap-1.5 md:gap-2 hover:bg-cookie-dark disabled:opacity-50 shadow-sm transition-all"
                     >
-                        {saving ? <Loader2 className="animate-spin h-4 w-4" /> : <Save className="h-4 w-4" />}
-                        <span className="hidden sm:inline">Guardar Cambios</span>
+                        {saving ? <Loader2 className="animate-spin h-3.5 w-3.5 md:h-4 md:w-4" /> : <Save className="h-3.5 w-3.5 md:h-4 md:w-4" />}
+                        <span className="md:inline">Guardar</span>
                     </button>
                 </div>
             </div>
@@ -259,7 +259,7 @@ export default function ShiftGrid({ onAddEmployee }) {
                     <table className="w-full border-collapse">
                         <thead className="sticky top-0 z-20 bg-cookie-cream shadow-sm">
                             <tr>
-                                <th className="p-2 text-center w-10 sticky left-0 z-30 bg-cookie-cream border-b border-r border-cookie-light">#</th>
+                                <th className="p-2 text-center w-10 min-w-[40px] max-w-[40px] sticky left-0 z-30 bg-cookie-cream border-b border-r border-cookie-light">#</th>
                                 <th className="p-2 text-left min-w-[200px] sticky left-10 z-30 bg-cookie-cream border-b border-r border-cookie-light shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
                                     <div className="flex justify-between items-center">
                                         <span>Empleado</span>
@@ -289,11 +289,11 @@ export default function ShiftGrid({ onAddEmployee }) {
                                 const isInactive = emp.status === 'Inactive';
 
                                 return (
-                                    <tr key={emp.id} className={`transition-colors ${isInactive ? 'bg-gray-100 opacity-75 grayscale' : 'hover:bg-gray-50'}`}>
-                                        <td className="p-2 text-center text-xs font-mono text-gray-400 sticky left-0 z-10 bg-inherit border-r border-cookie-light border-b border-gray-100">
+                                    <tr key={emp.id} className={`group transition-colors ${isInactive ? 'opacity-75 grayscale' : ''}`}>
+                                        <td className={`p-2 text-center text-xs font-mono text-gray-400 sticky left-0 z-10 w-10 min-w-[40px] max-w-[40px] border-r border-cookie-light border-b border-gray-100 ${isInactive ? 'bg-gray-100' : 'bg-white group-hover:bg-gray-50'}`}>
                                             {index + 1}
                                         </td>
-                                        <td className="p-2 border-r border-cookie-light sticky left-10 z-10 bg-inherit font-medium text-sm border-b border-gray-100 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
+                                        <td className={`p-2 border-r border-cookie-light sticky left-10 z-10 font-medium text-sm border-b border-gray-100 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)] ${isInactive ? 'bg-gray-100' : 'bg-white group-hover:bg-gray-50'}`}>
                                             <div className="truncate max-w-[180px] font-semibold text-gray-700">
                                                 {emp.name}
                                                 {isInactive && <span className="ml-2 text-[10px] bg-gray-200 text-gray-600 px-1 rounded border border-gray-300">EX</span>}
@@ -352,9 +352,9 @@ export default function ShiftGrid({ onAddEmployee }) {
                             <span className="text-xs truncate">Cesado (Ex-Empleado)</span>
                         </button>
                     ) : (
-                        scheduleTypes.map(type => (
+                        scheduleTypes.map((type, index) => (
                             <button
-                                key={type.code}
+                                key={`${index}-${type.code}`}
                                 onClick={() => handleSelectShift(type.code)}
                                 className={`p-2 rounded border text-left flex items-center gap-2 hover:brightness-95 transition-all ${type.color}`}
                             >

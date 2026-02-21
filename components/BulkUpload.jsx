@@ -4,11 +4,12 @@ import { useState, useCallback } from 'react';
 import * as XLSX from 'xlsx';
 import { Upload, FileSpreadsheet, Loader2, CheckCircle, AlertTriangle, X } from 'lucide-react';
 import { format } from 'date-fns';
+import { getCurrentWorkPeriod, getWorkPeriodDates } from '@/lib/workPeriod';
 
 export default function BulkUpload() {
     const [dragActive, setDragActive] = useState(false);
     const [file, setFile] = useState(null);
-    const [previewData, setPreviewData] = useState([]);
+    const [previewData, setPreviewData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState(null);
 
@@ -124,13 +125,13 @@ export default function BulkUpload() {
                 const res = await fetch('/api/shifts/bulk', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ shifts })
+                    body: JSON.stringify({ shifts, replace: true })
                 });
 
                 const result = await res.json();
 
                 if (result.success) {
-                    setMessage({ type: 'success', text: `Se cargaron ${result.count} turnos correctamente.` });
+                    setMessage({ type: 'success', text: `Se actualizaron ${result.count} turnos correctamente. Los datos anteriores han sido reemplazados.` });
                     setFile(null);
                     setPreviewData(null);
                 } else {
@@ -147,14 +148,69 @@ export default function BulkUpload() {
         reader.readAsArrayBuffer(file);
     };
 
-    const downloadTemplate = () => {
-        // Generate a simple template
-        const ws = XLSX.utils.json_to_sheet([
-            { "Nombre": "Juan Perez", "Código": "EMP001", "2024-01-01": "M", "2024-01-02": "T" }
-        ]);
-        const wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Plantilla");
-        XLSX.writeFile(wb, "Plantilla_Horarios.xlsx");
+    const handleCancel = () => {
+        setFile(null);
+        setPreviewData(null);
+        setMessage(null);
+    };
+
+    const downloadTemplate = async () => {
+        try {
+            setLoading(true);
+            // 1. Obtener fechas del periodo actual
+            const period = getCurrentWorkPeriod();
+            const dates = getWorkPeriodDates(period.displayMonth.getFullYear(), period.displayMonth.getMonth());
+            const dateStrings = dates.map(d => format(d, 'yyyy-MM-dd'));
+
+            // 2. Fetch data (Empleados y Turnos actuales)
+            const startStr = dateStrings[0];
+            const endStr = dateStrings[dateStrings.length - 1];
+
+            const [empRes, shiftRes] = await Promise.all([
+                fetch('/api/employees'),
+                fetch(`/api/shifts?startDate=${startStr}&endDate=${endStr}`)
+            ]);
+
+            const employees = await empRes.json();
+            const shifts = await shiftRes.json();
+
+            // 3. Construir datos para el Excel
+            let data = [];
+
+            if (Array.isArray(employees) && employees.length > 0) {
+                data = employees.map(emp => {
+                    const row = {
+                        "Nombre": emp.name,
+                        "Código": emp.code
+                    };
+
+                    // Llenar cada columna de fecha con el turno si existe
+                    dateStrings.forEach(dateStr => {
+                        const shift = (shifts || []).find(s => (s.employeeId === emp.id || s.employeeCode === emp.code) && s.date === dateStr);
+                        row[dateStr] = shift ? shift.type : '';
+                    });
+
+                    return row;
+                });
+            } else {
+                // Ejemplo si no hay empleados
+                data = [
+                    { "Nombre": "Ejemplo Empleado", "Código": "EMP000", [dateStrings[0]]: "M", [dateStrings[1]]: "T" }
+                ];
+            }
+
+            const ws = XLSX.utils.json_to_sheet(data);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, "Horarios");
+            XLSX.writeFile(wb, `Plantilla_Horarios_${format(period.displayMonth, 'MMM_yyyy')}.xlsx`);
+
+            setMessage({ type: 'success', text: 'Plantilla generada con datos actuales.' });
+        } catch (err) {
+            console.error(err);
+            setMessage({ type: 'error', text: 'Error al generar la plantilla dinámicamente.' });
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -224,13 +280,33 @@ export default function BulkUpload() {
                         </div>
                     )}
 
-                    <button
-                        onClick={handleUpload}
-                        disabled={loading}
-                        className="w-full cookie-button flex items-center justify-center gap-2"
-                    >
-                        {loading ? <Loader2 className="animate-spin" /> : 'Procesar y Guardar'}
-                    </button>
+                    {!message && (
+                        <div className="bg-orange-50 border border-orange-200 p-4 rounded-lg flex items-start gap-3 text-orange-800 text-sm">
+                            <AlertTriangle className="shrink-0 mt-0.5" size={18} />
+                            <div>
+                                <p className="font-bold">Advertencia de Reemplazo</p>
+                                <p>Al procesar este archivo, todos los turnos existentes en el sistema para las fechas incluidas en el Excel <strong>serán eliminados y reemplazados</strong> por los nuevos datos.</p>
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="flex gap-3">
+                        <button
+                            onClick={handleCancel}
+                            disabled={loading}
+                            className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 flex items-center justify-center gap-2 disabled:opacity-50"
+                        >
+                            <X size={18} /> Cancelar
+                        </button>
+                        <button
+                            onClick={handleUpload}
+                            disabled={loading}
+                            className="flex-[2] cookie-button flex items-center justify-center gap-2 disabled:opacity-50"
+                        >
+                            {loading ? <Loader2 className="animate-spin h-5 w-5" /> : <CheckCircle size={18} />}
+                            {loading ? 'Procesando...' : 'Aceptar Cambios'}
+                        </button>
+                    </div>
                 </div>
             )}
         </div>

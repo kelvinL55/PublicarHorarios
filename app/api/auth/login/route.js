@@ -3,24 +3,39 @@ import { getDB } from '@/lib/db';
 
 export async function POST(request) {
     try {
-        const { username, password } = await request.json();
+        const { username, password, employeeCode } = await request.json();
         const db = getDB();
 
-        // Simple authentication
-        const user = db.users.find(u => u.username === username && u.password === password);
+        let user;
+
+        // 1. Try login by employeeCode (look up user via employee record)
+        if (employeeCode) {
+            const emp = db.employees.find(e => e.code === employeeCode);
+            if (emp) {
+                user = db.users.find(u =>
+                    (u.employeeId === emp.id || u.employeeCode === employeeCode) &&
+                    u.password === password
+                );
+            }
+            // Also check direct employeeCode on user record
+            if (!user) {
+                user = db.users.find(u => u.employeeCode === employeeCode && u.password === password);
+            }
+        }
+
+        // 2. Try login by username
+        if (!user && username) {
+            user = db.users.find(u => u.username === username && u.password === password);
+        }
 
         if (user) {
-            // Check for Inactive status (Ex-employee)
             if (user.status === 'Inactive') {
                 return NextResponse.json(
                     { success: false, message: 'Su cuenta ya no está activa. Agradecemos su tiempo con nosotros.' },
                     { status: 403 }
                 );
             }
-
-            // In a real app, use JWT or Session cookies. 
-            // For this demo, we return user info to store in client context/localstorage.
-            const { password, ...userWithoutPass } = user;
+            const { password: _, ...userWithoutPass } = user;
             return NextResponse.json({ success: true, user: userWithoutPass });
         }
 

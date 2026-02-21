@@ -1,31 +1,37 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '@/app/context/AuthContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cookie, User, Lock, ArrowRight, UserPlus, Briefcase } from 'lucide-react';
+import { Cookie, User, Lock, ArrowRight, UserPlus, Briefcase, CheckCircle, AlertCircle } from 'lucide-react';
+
+const MAX_ATTEMPTS = 3;
 
 export default function LoginPage() {
     const { login } = useAuth();
 
-    // State
-    const [doorOpen, setDoorOpen] = useState(false); // Controls the entrance animation
+    const [doorOpen, setDoorOpen] = useState(false);
     const [isLogin, setIsLogin] = useState(true);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const [successMsg, setSuccessMsg] = useState('');
 
-    // Login State
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    // --- Login State ---
+    const [loginCode, setLoginCode] = useState('');
+    const [loginName, setLoginName] = useState('');
+    const [loginPassword, setLoginPassword] = useState('');
+    const [failedAttempts, setFailedAttempts] = useState(0);
+    const [usersWithCodes, setUsersWithCodes] = useState([]); // [{ username, employeeCode }]
 
-    // Register State
+    // --- Register State ---
     const [regCode, setRegCode] = useState('');
-    const [regUser, setRegUser] = useState('');
     const [regPass, setRegPass] = useState('');
+    const [regPassConfirm, setRegPassConfirm] = useState('');
+    const [lookupResult, setLookupResult] = useState(null);  // { name, type } from API
+    const [lookupLoading, setLookupLoading] = useState(false);
+    const [lookupError, setLookupError] = useState('');
 
-    // Data for Autocomplete
-    const [userList, setUserList] = useState([]);
+    // Animated background cookies
     const [cookies, setCookies] = useState([]);
 
     useEffect(() => {
@@ -36,25 +42,83 @@ export default function LoginPage() {
             duration: 10 + Math.random() * 10
         })));
 
-        fetch('/api/auth/users')
+        // Load users with codes for login autocomplete
+        fetch('/api/auth/users-with-codes')
             .then(res => res.json())
-            .then(data => { if (Array.isArray(data)) setUserList([...new Set(data)]); })
-            .catch(err => console.error("Error fetching users", err));
+            .then(data => { if (Array.isArray(data)) setUsersWithCodes(data); })
+            .catch(err => console.error('Error fetching users', err));
     }, []);
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setError('');
-        const res = await login(username, password);
-        if (!res.success) {
-            setError(res.message);
-            setLoading(false);
+    // ─── Register: lookup employee by code ─────────────────────────────────────
+    const lookupEmployee = useCallback(async (code) => {
+        if (!code || code.length < 2) {
+            setLookupResult(null);
+            setLookupError('');
+            return;
         }
+        setLookupLoading(true);
+        setLookupError('');
+        setLookupResult(null);
+        try {
+            const res = await fetch(`/api/employees/lookup?code=${encodeURIComponent(code)}`);
+            const data = await res.json();
+            if (data.success) {
+                setLookupResult(data);
+            } else {
+                setLookupError(data.message);
+            }
+        } catch {
+            setLookupError('Error de conexión');
+        } finally {
+            setLookupLoading(false);
+        }
+    }, []);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (regCode) lookupEmployee(regCode);
+        }, 500); // debounce 500ms
+        return () => clearTimeout(timer);
+    }, [regCode, lookupEmployee]);
+
+    // ─── Login: autocomplete name from code and vice versa ────────────────────
+    const handleLoginCodeChange = (val) => {
+        setLoginCode(val);
+        const match = usersWithCodes.find(u => u.employeeCode === val);
+        if (match) setLoginName(match.username);
     };
 
+    const handleLoginNameChange = (val) => {
+        setLoginName(val);
+        const match = usersWithCodes.find(u => u.username === val);
+        if (match) setLoginCode(match.employeeCode || '');
+    };
+
+    // ─── Login Submit ──────────────────────────────────────────────────────────
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        if (failedAttempts >= MAX_ATTEMPTS) return;
+        setLoading(true);
+        setError('');
+        const res = await login(loginName, loginPassword);
+        if (!res.success) {
+            const newAttempts = failedAttempts + 1;
+            setFailedAttempts(newAttempts);
+            if (newAttempts >= MAX_ATTEMPTS) {
+                setError('');
+            } else {
+                setError(res.message + ` (Intento ${newAttempts} de ${MAX_ATTEMPTS})`);
+            }
+        }
+        setLoading(false);
+    };
+
+    // ─── Register Submit ───────────────────────────────────────────────────────
     const handleRegister = async (e) => {
         e.preventDefault();
+        if (!lookupResult) { setError('Ingresa un código de empleado válido.'); return; }
+        if (regPass !== regPassConfirm) { setError('Las contraseñas no coinciden.'); return; }
+        if (regPass.length < 4) { setError('La contraseña debe tener al menos 4 caracteres.'); return; }
         setLoading(true);
         setError('');
         setSuccessMsg('');
@@ -62,18 +126,36 @@ export default function LoginPage() {
             const res = await fetch('/api/auth/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username: regUser, password: regPass, employeeCode: regCode })
+                body: JSON.stringify({ password: regPass, employeeCode: regCode })
             });
             const data = await res.json();
             if (data.success) {
-                setSuccessMsg('¡Cuenta creada! Ya puedes iniciar sesión.');
+                setSuccessMsg(`¡Cuenta creada para ${lookupResult.name}! Ya puedes iniciar sesión.`);
                 setIsLogin(true);
-                setUsername(regUser);
-                setPassword('');
-                setUserList(prev => [...prev, regUser]);
-            } else { setError(data.message); }
-        } catch (err) { setError('Error de conexión'); } finally { setLoading(false); }
+                setLoginName(lookupResult.name);
+                setLoginPassword('');
+                // refresh user list
+                fetch('/api/auth/users-with-codes')
+                    .then(r => r.json())
+                    .then(d => { if (Array.isArray(d)) setUsersWithCodes(d); });
+            } else {
+                setError(data.message);
+            }
+        } catch { setError('Error de conexión'); } finally { setLoading(false); }
     };
+
+    const switchTab = (toLogin) => {
+        setIsLogin(toLogin);
+        setError('');
+        setSuccessMsg('');
+        setLookupResult(null);
+        setLookupError('');
+        setRegCode('');
+        setRegPass('');
+        setRegPassConfirm('');
+    };
+
+    const isBlocked = failedAttempts >= MAX_ATTEMPTS;
 
     return (
         <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cookie-dark">
@@ -85,7 +167,7 @@ export default function LoginPage() {
                 <div className="absolute inset-0 bg-gradient-to-b from-cookie-dark/60 to-cookie-brand/60" />
             </div>
 
-            {/* Floating Cookies Animation */}
+            {/* Floating Cookies */}
             {doorOpen && (
                 <div className="absolute inset-0 z-0 pointer-events-none">
                     {cookies.map((c, i) => (
@@ -119,49 +201,30 @@ export default function LoginPage() {
                         </h1>
 
                         <div className="relative w-64 h-80 md:w-80 md:h-96 hover:scale-105 transition-transform duration-500">
-                            {/* Simple SVG Factory Door */}
                             <svg viewBox="0 0 200 300" className="w-full h-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                                {/* Frame */}
                                 <rect x="10" y="10" width="180" height="280" rx="5" fill="#3e2723" stroke="#5d4037" strokeWidth="5" />
-                                {/* Left Door */}
-                                <motion.g
-                                    className="origin-left"
-                                    whileHover={{ rotateY: -15, x: -5 }}
-                                    transition={{ type: "spring", stiffness: 100 }}
-                                >
+                                <motion.g className="origin-left" whileHover={{ rotateY: -15, x: -5 }} transition={{ type: "spring", stiffness: 100 }}>
                                     <rect x="20" y="20" width="80" height="260" fill="#5d4037" stroke="#3e2723" strokeWidth="2" />
-                                    {/* Panels */}
                                     <rect x="30" y="40" width="60" height="80" fill="#4e342e" />
                                     <rect x="30" y="140" width="60" height="120" fill="#4e342e" />
-                                    {/* Handle */}
                                     <circle cx="90" cy="150" r="5" fill="#ffab91" />
                                 </motion.g>
-                                {/* Right Door */}
-                                <motion.g
-                                    className="origin-right"
-                                    style={{ transformOrigin: "180px 0" }} // Correction for SVG origin
-                                    whileHover={{ rotateY: 15, x: 5 }}
-                                    transition={{ type: "spring", stiffness: 100 }}
-                                >
+                                <motion.g style={{ transformOrigin: "180px 0" }} whileHover={{ rotateY: 15, x: 5 }} transition={{ type: "spring", stiffness: 100 }}>
                                     <rect x="100" y="20" width="80" height="260" fill="#5d4037" stroke="#3e2723" strokeWidth="2" />
-                                    {/* Panels */}
                                     <rect x="110" y="40" width="60" height="80" fill="#4e342e" />
                                     <rect x="110" y="140" width="60" height="120" fill="#4e342e" />
-                                    {/* Handle */}
                                     <circle cx="110" cy="150" r="5" fill="#ffab91" />
                                 </motion.g>
-                                {/* Sign */}
                                 <rect x="50" y="-10" width="100" height="40" rx="5" fill="#8d6e63" stroke="#3e2723" strokeWidth="2" />
                                 <text x="100" y="15" textAnchor="middle" fill="#3e2723" fontSize="12" fontWeight="bold">ENTRADA</text>
                             </svg>
-
                             <div className="absolute -bottom-10 left-0 w-full text-center text-white/80 text-sm animate-pulse">
                                 Toca la puerta para ingresar
                             </div>
                         </div>
                     </motion.div>
                 ) : (
-                    /* --- LOGIN FORM --- */
+                    /* --- LOGIN / REGISTER FORM --- */
                     <motion.div
                         key="login"
                         initial={{ opacity: 0, scale: 0.8, y: 50 }}
@@ -172,49 +235,206 @@ export default function LoginPage() {
                         <div className="text-center mb-6">
                             <h1 className="text-3xl font-serif font-bold text-cookie-dark mb-1">Grupo Superior</h1>
                             <p className="text-cookie-brand font-medium">
-                                {isLogin ? 'Acceso a Planta' : 'Registro de Personal'}
+                                {isLogin ? 'Acceso a Planta' : 'Activación de Cuenta'}
                             </p>
                         </div>
 
                         {/* Tabs */}
                         <div className="flex mb-6 border-b border-gray-200">
-                            <button onClick={() => { setIsLogin(true); setError(''); }} className={`flex-1 pb-2 text-sm font-medium transition-colors ${isLogin ? 'text-cookie-brand border-b-2 border-cookie-brand' : 'text-gray-400 hover:text-gray-600'}`}>Ingreso</button>
-                            <button onClick={() => { setIsLogin(false); setError(''); }} className={`flex-1 pb-2 text-sm font-medium transition-colors ${!isLogin ? 'text-cookie-brand border-b-2 border-cookie-brand' : 'text-gray-400 hover:text-gray-600'}`}>Registro</button>
+                            <button onClick={() => switchTab(true)} className={`flex-1 pb-2 text-sm font-medium transition-colors ${isLogin ? 'text-cookie-brand border-b-2 border-cookie-brand' : 'text-gray-400 hover:text-gray-600'}`}>
+                                Ingreso
+                            </button>
+                            <button onClick={() => switchTab(false)} className={`flex-1 pb-2 text-sm font-medium transition-colors ${!isLogin ? 'text-cookie-brand border-b-2 border-cookie-brand' : 'text-gray-400 hover:text-gray-600'}`}>
+                                Activar Cuenta
+                            </button>
                         </div>
 
                         {successMsg && <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-lg text-sm text-center">{successMsg}</div>}
                         {error && <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-lg text-sm text-center">{error}</div>}
 
                         {isLogin ? (
-                            <form onSubmit={handleLogin} className="space-y-5">
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-cookie-dark">Usuario</label>
-                                    <div className="relative">
-                                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cookie-brand h-5 w-5" />
-                                        <input type="text" list="usernames" value={username} onChange={(e) => setUsername(e.target.value)} className="input-field !pl-12" placeholder="Selecciona o escribe..." required />
-                                        <datalist id="usernames">{userList.map((u, i) => <option key={i} value={u} />)}</datalist>
+                            /* ═══════════════ INGRESO ═══════════════ */
+                            isBlocked ? (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className="text-center py-6 space-y-4"
+                                >
+                                    <AlertCircle className="w-14 h-14 text-red-500 mx-auto" />
+                                    <p className="text-red-700 font-semibold">Acceso bloqueado</p>
+                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                        Has superado el número de intentos permitidos.<br />
+                                        Por favor, <strong>acércate al administrador</strong> para recuperar tu contraseña.
+                                    </p>
+                                </motion.div>
+                            ) : (
+                                <form onSubmit={handleLogin} className="space-y-4">
+                                    {/* Código */}
+                                    <div className="space-y-1">
+                                        <label className="text-sm font-medium text-cookie-dark">Código de Empleado</label>
+                                        <div className="relative">
+                                            <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 text-cookie-brand h-5 w-5" />
+                                            <input
+                                                type="text"
+                                                value={loginCode}
+                                                onChange={e => handleLoginCodeChange(e.target.value)}
+                                                className="input-field !pl-12"
+                                                placeholder="Ej. 5890"
+                                                list="codes-list"
+                                            />
+                                            <datalist id="codes-list">
+                                                {usersWithCodes.filter(u => u.employeeCode).map((u, i) => (
+                                                    <option key={i} value={u.employeeCode} label={u.username} />
+                                                ))}
+                                            </datalist>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-cookie-dark">Contraseña</label>
-                                    <div className="relative">
-                                        <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cookie-brand h-5 w-5" />
-                                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input-field !pl-12" placeholder="••••••••" required />
+
+                                    {/* Nombre */}
+                                    <div className="space-y-1">
+                                        <label className="text-sm font-medium text-cookie-dark">Nombre Completo</label>
+                                        <div className="relative">
+                                            <User className="absolute left-3 top-1/2 -translate-y-1/2 text-cookie-brand h-5 w-5" />
+                                            <input
+                                                type="text"
+                                                value={loginName}
+                                                onChange={e => handleLoginNameChange(e.target.value)}
+                                                className="input-field !pl-12"
+                                                placeholder="Selecciona o escribe tu nombre..."
+                                                list="names-list"
+                                                required
+                                            />
+                                            <datalist id="names-list">
+                                                {usersWithCodes.map((u, i) => (
+                                                    <option key={i} value={u.username} />
+                                                ))}
+                                            </datalist>
+                                        </div>
                                     </div>
-                                </div>
-                                <button type="submit" disabled={loading} className="w-full cookie-button flex items-center justify-center gap-2 group">{loading ? 'Ingresando...' : 'Entrar'} {!loading && <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />}</button>
-                            </form>
+
+                                    {/* Contraseña */}
+                                    <div className="space-y-1">
+                                        <label className="text-sm font-medium text-cookie-dark">Contraseña</label>
+                                        <div className="relative">
+                                            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-cookie-brand h-5 w-5" />
+                                            <input
+                                                type="password"
+                                                value={loginPassword}
+                                                onChange={e => setLoginPassword(e.target.value)}
+                                                className="input-field !pl-12"
+                                                placeholder="••••••••"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+
+                                    {/* Intentos restantes */}
+                                    {failedAttempts > 0 && (
+                                        <p className="text-xs text-center text-amber-600">
+                                            {MAX_ATTEMPTS - failedAttempts} intento(s) restante(s) antes del bloqueo
+                                        </p>
+                                    )}
+
+                                    <button type="submit" disabled={loading} className="w-full cookie-button flex items-center justify-center gap-2 group mt-2">
+                                        {loading ? 'Ingresando...' : 'Entrar'}
+                                        {!loading && <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />}
+                                    </button>
+                                </form>
+                            )
                         ) : (
+                            /* ═══════════════ ACTIVAR CUENTA ═══════════════ */
                             <form onSubmit={handleRegister} className="space-y-4">
-                                <div className="p-3 bg-blue-50 text-blue-700 text-xs rounded-lg mb-4">Ingresa el código que te proporcionó RRHH.</div>
-                                <div className="space-y-2"><label className="text-sm font-medium text-cookie-dark">Código de Empleado</label><div className="relative"><Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cookie-brand h-5 w-5" /><input type="text" value={regCode} onChange={(e) => setRegCode(e.target.value)} className="input-field !pl-12" placeholder="Ej. EMP005" required /></div></div>
-                                <div className="space-y-2"><label className="text-sm font-medium text-cookie-dark">Nuevo Usuario</label><div className="relative"><User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cookie-brand h-5 w-5" /><input type="text" value={regUser} onChange={(e) => setRegUser(e.target.value)} className="input-field !pl-12" placeholder="Elige un usuario" required /></div></div>
-                                <div className="space-y-2"><label className="text-sm font-medium text-cookie-dark">Nueva Contraseña</label><div className="relative"><Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cookie-brand h-5 w-5" /><input type="password" value={regPass} onChange={(e) => setRegPass(e.target.value)} className="input-field !pl-12" placeholder="Crea una contraseña" required /></div></div>
-                                <button type="submit" disabled={loading} className="w-full cookie-button flex items-center justify-center gap-2 group bg-green-600 hover:bg-green-700 hover:shadow-green-900/50">{loading ? 'Creando...' : 'Crear Cuenta'} {!loading && <UserPlus className="h-4 w-4" />}</button>
+                                <div className="p-3 bg-blue-50 text-blue-700 text-xs rounded-lg">
+                                    Ingresa el código que te proporcionó RRHH para activar tu acceso.
+                                </div>
+
+                                {/* Código */}
+                                <div className="space-y-1">
+                                    <label className="text-sm font-medium text-cookie-dark">Código de Empleado</label>
+                                    <div className="relative">
+                                        <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 text-cookie-brand h-5 w-5" />
+                                        <input
+                                            type="text"
+                                            value={regCode}
+                                            onChange={e => { setRegCode(e.target.value); setLookupResult(null); setLookupError(''); }}
+                                            className={`input-field !pl-12 transition-colors ${lookupResult ? 'border-green-400 focus:border-green-500' : lookupError ? 'border-red-400' : ''}`}
+                                            placeholder="Ej. 5890"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Employee confirmation card */}
+                                <AnimatePresence>
+                                    {lookupLoading && (
+                                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="text-xs text-gray-400 text-center py-1">
+                                            Buscando empleado...
+                                        </motion.div>
+                                    )}
+                                    {lookupError && (
+                                        <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                                            <AlertCircle className="w-4 h-4 shrink-0" />
+                                            {lookupError}
+                                        </motion.div>
+                                    )}
+                                    {lookupResult && (
+                                        <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex items-center gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+                                            <CheckCircle className="w-5 h-5 text-green-600 shrink-0" />
+                                            <div>
+                                                <p className="font-semibold text-green-800 text-sm">{lookupResult.name}</p>
+                                                <p className="text-xs text-green-600">{lookupResult.type || 'Colaborador'}</p>
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+
+                                {/* Nueva Contraseña */}
+                                <div className="space-y-1">
+                                    <label className="text-sm font-medium text-cookie-dark">Nueva Contraseña</label>
+                                    <div className="relative">
+                                        <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-cookie-brand h-5 w-5" />
+                                        <input
+                                            type="password"
+                                            value={regPass}
+                                            onChange={e => setRegPass(e.target.value)}
+                                            className="input-field !pl-12"
+                                            placeholder="Mínimo 4 caracteres"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Confirmar Contraseña */}
+                                <div className="space-y-1">
+                                    <label className="text-sm font-medium text-cookie-dark">Confirmar Contraseña</label>
+                                    <div className="relative">
+                                        <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-cookie-brand h-5 w-5" />
+                                        <input
+                                            type="password"
+                                            value={regPassConfirm}
+                                            onChange={e => setRegPassConfirm(e.target.value)}
+                                            className={`input-field !pl-12 ${regPassConfirm && regPass !== regPassConfirm ? 'border-red-400' : regPassConfirm && regPass === regPassConfirm ? 'border-green-400' : ''}`}
+                                            placeholder="Repite la contraseña"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    disabled={loading || !lookupResult || !regPass || regPass !== regPassConfirm}
+                                    className="w-full cookie-button flex items-center justify-center gap-2 group bg-green-600 hover:bg-green-700 hover:shadow-green-900/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
+                                    {loading ? 'Creando cuenta...' : 'Activar mi Cuenta'}
+                                    {!loading && <UserPlus className="h-4 w-4" />}
+                                </button>
                             </form>
                         )}
+
                         <div className="absolute -bottom-16 left-0 right-0 text-center">
-                            <button onClick={() => setDoorOpen(false)} className="text-white/60 hover:text-white text-sm underline">Volver a la Entrada</button>
+                            <button onClick={() => setDoorOpen(false)} className="text-white/60 hover:text-white text-sm underline">
+                                Volver a la Entrada
+                            </button>
                         </div>
                     </motion.div>
                 )}
@@ -222,4 +442,3 @@ export default function LoginPage() {
         </div>
     );
 }
-
