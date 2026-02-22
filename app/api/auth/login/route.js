@@ -8,7 +8,7 @@ export async function POST(request) {
 
         let user;
 
-        // 1. Try login by employeeCode (look up user via employee record)
+        // 1. Intentar iniciar sesión por Código de Empleado (buscar usuario a través del registro de empleado)
         if (employeeCode) {
             const emp = db.employees.find(e => e.code === employeeCode);
             if (emp) {
@@ -17,13 +17,13 @@ export async function POST(request) {
                     u.password === password
                 );
             }
-            // Also check direct employeeCode on user record
+            // También verificar código de empleado directamente en el registro de usuario
             if (!user) {
                 user = db.users.find(u => u.employeeCode === employeeCode && u.password === password);
             }
         }
 
-        // 2. Try login by username
+        // 2. Intentar iniciar sesión por nombre de usuario
         if (!user && username) {
             user = db.users.find(u => u.username === username && u.password === password);
         }

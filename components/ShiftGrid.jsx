@@ -11,6 +11,7 @@ export default function ShiftGrid({ onAddEmployee }) {
     // Inicializar con el periodo laboral actual
     const initialPeriod = getCurrentWorkPeriod();
     const [displayMonth, setDisplayMonth] = useState(initialPeriod.displayMonth);
+    // Estado principal
     const [employees, setEmployees] = useState([]);
     const [shifts, setShifts] = useState([]);
     const [scheduleTypes, setScheduleTypes] = useState([]);
@@ -18,7 +19,7 @@ export default function ShiftGrid({ onAddEmployee }) {
     const [saving, setSaving] = useState(false);
     const [isConfigOpen, setIsConfigOpen] = useState(false);
 
-    // State for dropdown popover
+    // Estado para el popover del desplegable
     const [activeCell, setActiveCell] = useState(null); // { employeeId, date, rect }
 
     const scrollContainerRef = useRef(null);
@@ -31,7 +32,7 @@ export default function ShiftGrid({ onAddEmployee }) {
         fetchScheduleTypes();
     }, [displayMonth]);
 
-    // Close dropdown when clicking outside
+    // Cerrar desplegable al hacer clic fuera
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (activeCell && !e.target.closest('.shift-dropdown')) {
@@ -42,6 +43,7 @@ export default function ShiftGrid({ onAddEmployee }) {
         return () => document.removeEventListener('click', handleClickOutside);
     }, [activeCell]);
 
+    // Obtener Tipos de Horario desde la API o usar predeterminados
     const fetchScheduleTypes = async () => {
         try {
             const res = await fetch('/api/schedule-types');
@@ -52,6 +54,7 @@ export default function ShiftGrid({ onAddEmployee }) {
         }
     };
 
+    // Obtener Empleados y Turnos
     const fetchData = async () => {
         setLoading(true);
         try {
@@ -69,13 +72,13 @@ export default function ShiftGrid({ onAddEmployee }) {
             const shiftData = await shiftRes.json();
             const userData = await userRes.json();
 
-            // Merge status from users to employees
+            // Fusionar el estado de los usuarios con los empleados
             const mergedEmployees = (empData || []).map(emp => {
                 const user = (userData || []).find(u => u.employeeCode === emp.code || u.employeeId === emp.id);
                 return { ...emp, status: user?.status || 'Active' };
             });
 
-            // Sort: Active first, then Inactive
+            // Ordenar: Activos primero, luego Inactivos
             mergedEmployees.sort((a, b) => {
                 if (a.status === b.status) return a.name.localeCompare(b.name);
                 return a.status === 'Inactive' ? 1 : -1;
@@ -98,24 +101,41 @@ export default function ShiftGrid({ onAddEmployee }) {
     const getShiftStyle = (typeCode) => {
         if (typeCode === 'E') return 'bg-gray-200 text-gray-800 border-gray-400';
         const type = scheduleTypes.find(t => t.code === typeCode);
-        return type ? type.color : 'bg-gray-50'; // Default gray
+        return type ? type.color : 'bg-gray-50'; // Gris por defecto
     };
 
     const handleCellClick = (e, employeeId, date) => {
         e.stopPropagation();
 
-        // Check if employee is inactive
+        // Verificar si el empleado está inactivo
         const employee = employees.find(e => e.id === employeeId);
-        // We will handle restriction in the dropdown render or here?
-        // User said: "only allow me to assign... E". 
-        // Let's open the dropdown but it will only show 'E' if inactive.
+        // Manejaremos la restricción en la renderización del desplegable o aquí?
+        // El usuario dijo: "solo permitirme asignar... E".
+        // Abramos el desplegable, pero solo mostrará 'E' si está inactivo.
 
+        // Si hacen clic en la misma celda, cerrarla
+        if (activeCell && activeCell.employeeId === employeeId && activeCell.date === format(date, 'yyyy-MM-dd')) {
+            setActiveCell(null);
+            return;
+        }
+
+        // Calcular posición del popover
         const rect = e.currentTarget.getBoundingClientRect();
+        // Intentar centrar el popover encima o debajo basado en el espacio en pantalla
+        const screenHeight = window.innerHeight;
+        const spaceBelow = screenHeight - rect.bottom;
+
+        let top = rect.bottom + window.scrollY + 5;
+        if (spaceBelow < 200) {
+            // Mostrar arriba si no hay espacio abajo
+            top = rect.top + window.scrollY - 180; // altura aproximada del popover
+        }
+
         setActiveCell({
             employeeId,
             date: format(date, 'yyyy-MM-dd'),
-            top: rect.bottom + window.scrollY,
-            left: rect.left + window.scrollX,
+            top: top,
+            left: Math.min(rect.left + window.scrollX, window.innerWidth - 260), // Ajustar para que no se salga por la derecha
             isInactive: employee?.status === 'Inactive'
         });
     };
@@ -137,13 +157,15 @@ export default function ShiftGrid({ onAddEmployee }) {
 
     const saveChanges = async () => {
         setSaving(true);
+        // Filtrar solo los turnos válidos del mes/periodo actual antes de guardar
+        // O guardar el array completo de turnos (más simple en este prototipo JSON)
         try {
             await fetch('/api/shifts', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ shifts })
             });
-            // Verification?
+            // ¿Verificación?
         } catch (err) {
             alert('Error al guardar');
         } finally {
@@ -189,7 +211,7 @@ export default function ShiftGrid({ onAddEmployee }) {
 
     return (
         <div className="bg-white rounded-xl shadow-lg border border-cookie-light relative">
-            {/* Controls */}
+            {/* Controles */}
             <div className="p-2 md:p-4 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 bg-cookie-cream border-b border-cookie-light">
                 <div className="flex items-center justify-between w-full md:w-auto gap-4">
                     <div className="min-w-0">
@@ -237,7 +259,7 @@ export default function ShiftGrid({ onAddEmployee }) {
                 </div>
             </div>
 
-            {/* Config Modal */}
+            {/* Modal de Configuración */}
             <ScheduleConfigModal
                 isOpen={isConfigOpen}
                 onClose={() => setIsConfigOpen(false)}
@@ -245,11 +267,11 @@ export default function ShiftGrid({ onAddEmployee }) {
                 onSave={saveScheduleConfig}
             />
 
-            {/* Grid Container with Sticky Scrollbar logic */}
+            {/* Contenedor de la Cuadrícula con lógica de barra de desplazamiento pegajosa */}
             <div className="relative">
-                {/* Scroll Controls */}
+                {/* Controles de Desplazamiento */}
                 <div className="absolute top-0 right-0 h-full flex flex-col justify-center pointer-events-none z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                    {/* Could add floating scroll buttons here purely for visual cue if needed */}
+                    {/* Se podrían añadir botones de desplazamiento flotantes aquí puramente como indicación visual si fuera necesario */}
                 </div>
 
                 <div

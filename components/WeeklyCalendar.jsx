@@ -30,7 +30,7 @@ export default function WeeklyCalendar({ employeeId }) {
     const end = endOfWeek(currentDate, { weekStartsOn: 6 });
     const days = eachDayOfInterval({ start, end });
 
-    // Fetch schedule types once on mount
+    // ─── Cargar Datos ───────────────────────────────────────────────────────────
     useEffect(() => {
         fetch('/api/schedule-types')
             .then(r => r.json())
@@ -59,26 +59,28 @@ export default function WeeklyCalendar({ employeeId }) {
         }
     };
 
+    // ─── Ayudantes ──────────────────────────────────────────────────────────────
     const getShiftForDay = (date) => {
         const dateStr = format(date, 'yyyy-MM-dd');
         const shift = shifts.find(s => s.date === dateStr);
         if (!shift) return null;
 
-        // Cesado special case
+        // Caso especial: Cesado
         if (shift.type === 'E') {
             return { label: 'Cesado', style: { text: 'text-gray-600', bg: 'bg-gray-100 border-gray-300' } };
         }
 
-        // Dynamic lookup from admin-configured types
+        // Búsqueda dinámica de tipos configurados por el administrador
         const typeConfig = scheduleTypes.find(t => t.code === shift.type);
         if (typeConfig) {
             return { label: typeConfig.label, style: deriveEmployeeStyle(typeConfig.color) };
         }
 
-        // Fallback: just show the code
+        // Fallback: solo muestra el código
         return { label: shift.type, style: { text: 'text-gray-600', bg: 'bg-gray-50 border-gray-200' } };
     };
 
+    // ─── Navegación ─────────────────────────────────────────────────────────────
     const changeWeek = (dir) => {
         setCurrentDate(prev => dir > 0 ? addWeeks(prev, 1) : subWeeks(prev, 1));
     };

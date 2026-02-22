@@ -14,9 +14,12 @@ export default function UserManagement() {
 
     // Bulk upload state
     const [bulkFile, setBulkFile] = useState(null);
+    const [bulkData, setBulkData] = useState(null);
     const [bulkPreview, setBulkPreview] = useState(null); // { headers, rows, rawData }
     const [bulkLoading, setBulkLoading] = useState(false);
     const [bulkMessage, setBulkMessage] = useState(null);
+    const [uploadLoading, setUploadLoading] = useState(false);
+    const [uploadFeedback, setUploadFeedback] = useState(null);
     const fileInputRef = useRef(null);
 
     useEffect(() => {
@@ -36,59 +39,69 @@ export default function UserManagement() {
         }
     };
 
-    // ─── Excel Template Download ────────────────────────────────────────────────
-    const downloadTemplate = async () => {
-        setBulkLoading(true);
-        try {
-            const res = await fetch('/api/users');
-            const existingUsers = await res.json();
-
-            const empRes = await fetch('/api/employees');
-            const employees = await empRes.json();
-
-            let data;
-            if (existingUsers.length > 0) {
-                data = existingUsers.map(u => ({
-                    'Usuario': u.username,
-                    'Contraseña': '',             // No exportamos passwords reales
-                    'Rol': u.role === 'admin' ? 'admin' : 'employee',
-                    'Codigo Empleado': u.employeeCode || '',
-                    'Estado': u.status || 'Active'
-                }));
-            } else {
-                data = [
-                    { 'Usuario': 'john.doe', 'Contraseña': '1234', 'Rol': 'employee', 'Codigo Empleado': 'EMP001', 'Estado': 'Active' },
-                    { 'Usuario': 'jane.admin', 'Contraseña': '1234', 'Rol': 'admin', 'Codigo Empleado': '', 'Estado': 'Active' }
-                ];
+    // ─── Descarga de Plantilla Excel ──────────────────────────────────────────────
+    const downloadTemplate = () => {
+        // Datos de muestra
+        const templateData = [
+            {
+                "idEmpleado": "1001",
+                "Usuario": "juan.perez",
+                "Contraseña": "1234",
+                "Rol": "employee",
+                "NombresEmpleado": "Juan Pérez",
+                "Cargo": "Operador",
+                "Estado": "Activo",
+                "FechaIngreso": "2023-01-15"
+            },
+            {
+                "idEmpleado": "1002",
+                "Usuario": "maria.gomez",
+                "Contraseña": "1234",
+                "Rol": "employee",
+                "NombresEmpleado": "María Gómez",
+                "Cargo": "Supervisor",
+                "Estado": "Activo",
+                "FechaIngreso": "2022-05-20"
+            },
+            {
+                "idEmpleado": "",
+                "Usuario": "nuevo.usuario",
+                "Contraseña": "1234",
+                "Rol": "employee",
+                "NombresEmpleado": "Nombre del Empleado",
+                "Cargo": "Cargo del Empleado",
+                "Estado": "Activo",
+                "FechaIngreso": "AAAA-MM-DD"
             }
+        ];
 
-            // Second sheet — reference of employees
-            const empData = (Array.isArray(employees) ? employees : []).map(e => ({
-                'Codigo': e.code,
-                'Nombre': e.name
-            }));
+        // Crear hoja de cálculo
+        const worksheet = XLSX.utils.json_to_sheet(templateData);
+        // Ajustar ancho de las columnas
+        const wscols = [
+            { wch: 15 }, // idEmpleado
+            { wch: 20 }, // Usuario
+            { wch: 15 }, // Contrasena
+            { wch: 15 }, // Rol
+            { wch: 25 }, // NombresEmpleado
+            { wch: 15 }, // Cargo
+            { wch: 15 }, // Estado
+            { wch: 20 }  // FechaIngreso
+        ];
+        worksheet['!cols'] = wscols;
 
-            const wb = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(data), 'Usuarios');
-            if (empData.length > 0) {
-                XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(empData), 'Referencia Empleados');
-            }
-            XLSX.writeFile(wb, 'Plantilla_Usuarios.xlsx');
-            setBulkMessage({ type: 'success', text: 'Plantilla descargada correctamente.' });
-        } catch (err) {
-            console.error(err);
-            setBulkMessage({ type: 'error', text: 'Error al generar la plantilla.' });
-        } finally {
-            setBulkLoading(false);
-        }
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Plantilla_Usuarios");
+        XLSX.writeFile(workbook, "plantilla_carga_usuarios.xlsx");
     };
 
-    // ─── Excel File Processing ──────────────────────────────────────────────────
+    // ─── Procesamiento de Archivo Excel ───────────────────────────────────────────
     const processFile = (file) => {
         if (!file) return;
         setBulkFile(file);
         setBulkMessage(null);
         setBulkPreview(null);
+        setBulkData(null); // Clear previous bulk data
 
         const reader = new FileReader();
         reader.onload = (evt) => {
@@ -106,7 +119,23 @@ export default function UserManagement() {
                 const rows = allRows.slice(1, 6); // preview first 5 rows
 
                 setBulkPreview({ headers, rows, rawData, totalRows: rawData.length });
+
+                // Process rawData into a more usable format for the payload
+                const processedData = rawData.map(row => ({
+                    employeeCode: String(row['idEmpleado'] || '').trim(),
+                    username: String(row['Usuario'] || '').trim(),
+                    password: String(row['Contraseña'] || '').trim() || '1234', // Default password if not provided
+                    role: String(row['Rol'] || 'employee').trim().toLowerCase(),
+                    employeeName: String(row['NombresEmpleado'] || '').trim(),
+                    position: String(row['Cargo'] || '').trim(),
+                    status: String(row['Estado'] || 'Active').trim(),
+                    hireDate: String(row['FechaIngreso'] || '').trim(),
+                })).filter(u => u.username); // Only include rows with a username
+
+                setBulkData(processedData);
+
             } catch (e) {
+                console.error("Error reading Excel file:", e);
                 setBulkMessage({ type: 'error', text: 'Error leyendo el archivo Excel.' });
             }
         };
@@ -119,39 +148,33 @@ export default function UserManagement() {
         e.target.value = '';
     };
 
-    // ─── Bulk Upload Submit ─────────────────────────────────────────────────────
+    // ─── Envío de Carga Masiva ─────────────────────────────────────────────────────
     const handleBulkUpload = async () => {
-        if (!bulkPreview?.rawData) return;
-        setBulkLoading(true);
-        try {
-            const usersPayload = bulkPreview.rawData.map(row => ({
-                username: String(row['Usuario'] || '').trim(),
-                password: String(row['Contraseña'] || '').trim() || '1234',
-                role: String(row['Rol'] || 'employee').trim().toLowerCase(),
-                employeeCode: String(row['Codigo Empleado'] || '').trim(),
-                status: String(row['Estado'] || 'Active').trim()
-            })).filter(u => u.username);
+        if (!bulkData || bulkData.length === 0) return;
+        setUploadLoading(true);
+        setUploadFeedback(null);
 
+        try {
+            // El backend iterará y procesará cada fila, retornando resultados (éxito/fallos)
             const res = await fetch('/api/users/bulk', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ users: usersPayload, replace: true })
+                body: JSON.stringify({ usersData: bulkData })
             });
+            const data = await res.json();
 
-            const result = await res.json();
-            if (result.success) {
-                setBulkMessage({ type: 'success', text: `Carga completada: ${result.created} creados, ${result.updated} actualizados.` });
-                setBulkFile(null);
-                setBulkPreview(null);
+            if (data.success) {
+                setUploadFeedback({ type: 'success', message: `Éxito: ${data.added} añadidos, ${data.updated} actualizados. Fallos: ${data.errors.length}` });
+                // Solo limpiar si hubo fallos, de lo contrario dejar que el usuario recargue
                 fetchUsers();
             } else {
-                setBulkMessage({ type: 'error', text: result.message || 'Error en la carga.' });
+                setUploadFeedback({ type: 'error', message: data.message || 'Error en la subida masiva.' });
             }
-        } catch (err) {
-            console.error(err);
-            setBulkMessage({ type: 'error', text: 'Error al procesar los datos.' });
+        } catch (error) {
+            setUploadFeedback({ type: 'error', message: 'Error de red durante la subida.' });
         } finally {
-            setBulkLoading(false);
+            setUploadLoading(false);
+            // Si el éxito es total, podríamos limpiar formBulk() después de unos segundos
         }
     };
 
@@ -159,10 +182,14 @@ export default function UserManagement() {
         setBulkFile(null);
         setBulkPreview(null);
         setBulkMessage(null);
+        setBulkData(null);
+        setUploadFeedback(null);
     };
 
-    // ─── User CRUD ──────────────────────────────────────────────────────────────
-    const handleEdit = (user) => setEditingUser({ ...user });
+    // ─── CRUD de Usuarios ──────────────────────────────────────────────────────────────
+    const handleEdit = (user) => {
+        setEditingUser({ ...user });
+    };
 
     const handleSaveEdit = async () => {
         setActionLoading(true);
@@ -218,16 +245,15 @@ export default function UserManagement() {
 
     return (
         <div className="space-y-4">
-            {/* ── USER TABLE ──────────────────────────────────────────────────── */}
-            <div className="bg-white rounded-xl shadow-lg border border-cookie-light overflow-hidden">
-                <div className="p-2 md:p-4 bg-cookie-cream border-b border-cookie-light flex justify-between items-center">
-                    <h2 className="text-lg md:text-xl font-bold text-cookie-dark">Gestión de Usuarios</h2>
-                    <button onClick={fetchUsers} className="text-xs md:text-sm text-cookie-brand hover:underline">Refrescar</button>
+            {/* Tabla de Usuarios Existentes */}
+            <div className="bg-white rounded-xl shadow-sm border border-cookie-light overflow-hidden">
+                <div className="p-4 border-b border-gray-100 bg-gray-50 flex justify-between items-center">
+                    <h2 className="text-lg font-bold text-cookie-dark">Usuarios Registrados</h2>
+                    <span className="bg-white px-3 py-1 rounded-full text-xs font-medium border border-gray-200 text-gray-600">Total: {users.length}</span>
                 </div>
-
                 <div className="overflow-x-auto">
-                    <table className="w-full text-left border-collapse">
-                        <thead className="bg-gray-50 text-gray-500 text-[10px] md:text-xs uppercase">
+                    <table className="w-full text-left text-sm whitespace-nowrap">
+                        <thead className="bg-gray-50/50 text-gray-600 border-b border-gray-200">
                             <tr>
                                 <th className="p-2 md:p-4 w-10 md:w-12 text-center">#</th>
                                 <th className="p-2 md:p-4">Usuario</th>
@@ -270,113 +296,109 @@ export default function UserManagement() {
                 </div>
             </div>
 
-            {/* ── BULK UPLOAD PANEL ────────────────────────────────────────────── */}
-            <div className="bg-white rounded-xl shadow-lg border border-cookie-light overflow-hidden">
-                <div className="p-4 bg-cookie-cream border-b border-cookie-light flex justify-between items-center">
-                    <h2 className="text-lg font-bold text-cookie-dark">Carga Masiva de Usuarios</h2>
-                    <div className="flex gap-3">
-                        <button
-                            onClick={downloadTemplate}
-                            disabled={bulkLoading}
-                            className="flex items-center gap-1.5 text-sm text-green-700 hover:text-green-900 font-medium disabled:opacity-50"
-                        >
-                            <Download size={15} /> Descargar Plantilla
-                        </button>
-                        <button
-                            onClick={() => fileInputRef.current?.click()}
-                            disabled={bulkLoading}
-                            className="flex items-center gap-1.5 text-sm text-cookie-brand hover:text-cookie-dark font-medium disabled:opacity-50"
-                        >
-                            <Upload size={15} /> Cargar Excel
-                        </button>
-                        <input ref={fileInputRef} type="file" accept=".xlsx,.xls" className="hidden" onChange={handleFileInput} />
-                    </div>
+            {/* Sección de Carga Masiva - Sólo Diseño */}
+            <div className="bg-white rounded-xl shadow-sm border border-cookie-light p-6 mb-8">
+                <div className="flex justify-between items-center mb-6 border-b border-gray-100 pb-4">
+                    <h2 className="text-xl font-bold text-cookie-dark">Carga Masiva de Usuarios</h2>
+                    <button
+                        onClick={downloadTemplate}
+                        className="flex items-center gap-2 text-sm text-cookie-brand bg-cookie-brand/10 hover:bg-cookie-brand/20 py-2 px-4 rounded-lg transition-colors font-medium border border-cookie-brand/20"
+                    >
+                        <Download size={16} /> Descargar Plantilla Excel
+                    </button>
                 </div>
 
-                <div className="p-4 space-y-4">
-                    {!bulkFile && !bulkMessage && (
-                        <div
-                            onClick={() => fileInputRef.current?.click()}
-                            className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center cursor-pointer hover:border-cookie-brand hover:bg-cookie-cream/30 transition-all"
-                        >
-                            <Upload className="mx-auto text-gray-400 mb-2" size={32} />
-                            <p className="text-gray-500 text-sm">Haz clic o arrastra un archivo Excel aquí</p>
-                            <p className="text-xs text-gray-400 mt-1">Formato: Usuario, Contraseña, Rol, Codigo Empleado, Estado</p>
+                {!bulkData ? (
+                    <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 hover:border-cookie-light bg-gray-50/50 hover:bg-white transition-all relative group cursor-pointer">
+                        <input
+                            type="file"
+                            accept=".xlsx, .xls"
+                            onChange={handleFileInput}
+                            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                            ref={fileInputRef}
+                            title="Haga clic o arrastre un archivo Excel aquí"
+                        />
+                        <div className="flex flex-col items-center justify-center text-center opacity-70 group-hover:opacity-100 transition-opacity">
+                            <div className="bg-cookie-brand/10 p-4 rounded-full mb-4">
+                                <Upload className="w-8 h-8 text-cookie-brand" />
+                            </div>
+                            <p className="text-base font-medium text-gray-700 mb-1">Subir Archivo Excel</p>
+                            <p className="text-sm text-gray-500 max-w-sm">Arrastra y suelta tu archivo aquí, o haz clic para seleccionar la plantilla rellenada.</p>
                         </div>
-                    )}
-
-                    {/* Preview */}
-                    {bulkPreview && !bulkMessage && (
-                        <div className="space-y-4">
-                            <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                                <CheckCircle size={16} className="text-green-600" />
-                                Archivo cargado: <span className="text-cookie-brand">{bulkFile?.name}</span>
-                                <span className="text-gray-400 ml-auto">{bulkPreview.totalRows} usuarios detectados</span>
+                    </div>
+                ) : (
+                    <div className="space-y-6">
+                        {/* Resumen de Archivo */}
+                        <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 flex justify-between items-center">
+                            <div>
+                                <h3 className="text-blue-900 font-medium">Archivo listo para procesar</h3>
+                                <p className="text-blue-700 text-sm">{bulkData.length} registros detectados</p>
                             </div>
-
-                            <div className="overflow-x-auto rounded-lg border border-gray-200">
-                                <table className="w-full text-xs">
-                                    <thead className="bg-gray-100">
-                                        <tr>
-                                            {bulkPreview.headers.map((h, i) => (
-                                                <th key={i} className="p-2 border-b font-medium text-gray-600 text-left">{h}</th>
-                                            ))}
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {bulkPreview.rows.map((row, i) => (
-                                            <tr key={i} className="border-b">
-                                                {row.map((cell, j) => <td key={j} className="p-2 text-gray-500">{cell}</td>)}
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                                <div className="p-2 text-center text-gray-400 text-xs bg-gray-50">
-                                    Mostrando {bulkPreview.rows.length} de {bulkPreview.totalRows} filas
-                                </div>
-                            </div>
-
-                            <div className="bg-orange-50 border border-orange-200 p-4 rounded-lg flex items-start gap-3 text-orange-800 text-sm">
-                                <AlertTriangle className="shrink-0 mt-0.5" size={18} />
-                                <div>
-                                    <p className="font-bold">Advertencia de Reemplazo</p>
-                                    <p>Al aceptar, todos los usuarios (excepto administradores) serán <strong>eliminados y reemplazados</strong> por los usuarios del Excel. La contraseña por defecto es <code className="bg-orange-100 px-1 rounded">1234</code> si no se especifica.</p>
-                                </div>
-                            </div>
-
-                            <div className="flex gap-3">
+                            <div className="flex gap-2">
                                 <button
                                     onClick={handleBulkCancel}
-                                    disabled={bulkLoading}
-                                    className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 flex items-center justify-center gap-2 disabled:opacity-50"
+                                    className="px-4 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-800 rounded-lg transition-colors border border-transparent hover:border-gray-200"
                                 >
-                                    <X size={18} /> Cancelar
+                                    Cancelar
                                 </button>
                                 <button
                                     onClick={handleBulkUpload}
-                                    disabled={bulkLoading}
-                                    className="flex-[2] cookie-button flex items-center justify-center gap-2 disabled:opacity-50"
+                                    disabled={uploadLoading || !bulkData || bulkData.length === 0}
+                                    className="bg-cookie-brand hover:bg-cookie-dark text-white px-4 py-2 rounded-lg flex items-center gap-2 font-medium transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    {bulkLoading ? <Loader2 className="animate-spin h-5 w-5" /> : <CheckCircle size={18} />}
-                                    {bulkLoading ? 'Procesando...' : 'Aceptar Cambios'}
+                                    {uploadLoading ? <Loader2 className="animate-spin w-4 h-4" /> : <Upload size={16} />}
+                                    Procesar Usuarios
                                 </button>
                             </div>
                         </div>
-                    )}
 
-                    {/* Feedback message */}
-                    {bulkMessage && (
-                        <div className={`p-4 rounded-lg flex items-center justify-between gap-2 ${bulkMessage.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
-                            <div className="flex items-center gap-2">
-                                {bulkMessage.type === 'success' ? <CheckCircle size={20} /> : <AlertTriangle size={20} />}
-                                {bulkMessage.text}
+                        {/* Mensaje de Subida */}
+                        {uploadFeedback && (
+                            <div className={`p-4 rounded-xl flex items-start gap-3 border ${uploadFeedback.type === 'success' ? 'bg-green-50 border-green-200 text-green-800' : 'bg-red-50 border-red-200 text-red-800'}`}>
+                                {uploadFeedback.type === 'success' ? <CheckCircle className="shrink-0 mt-0.5" size={20} /> : <AlertTriangle className="shrink-0 mt-0.5" size={20} />}
+                                <div>
+                                    <p className="font-medium text-sm">{uploadFeedback.message}</p>
+                                </div>
+                                <button onClick={() => setUploadFeedback(null)} className="ml-auto p-1 rounded hover:bg-black/5 opacity-50 hover:opacity-100 transition-opacity">
+                                    <X size={16} />
+                                </button>
                             </div>
-                            <button onClick={() => setBulkMessage(null)} className="p-1 rounded hover:bg-black/10">
-                                <X size={16} />
-                            </button>
-                        </div>
-                    )}
-                </div>
+                        )}
+
+                        {/* Vista Previa de Tabla */}
+                        {bulkPreview && (
+                            <div className="border border-gray-200 rounded-xl overflow-hidden bg-white">
+                                <div className="bg-gray-50 border-b border-gray-200 p-3 flex justify-between items-center">
+                                    <h4 className="font-medium text-sm text-gray-700 flex items-center gap-2">
+                                        Vista Previa <span className="text-xs bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full">Primeras 5 filas</span>
+                                    </h4>
+                                    <span className="text-xs text-gray-500">Total en archivo: {bulkPreview.totalRows} filas</span>
+                                </div>
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-sm text-left whitespace-nowrap">
+                                        <thead className="bg-white">
+                                            <tr>
+                                                {bulkPreview.headers.map((h, i) => (
+                                                    <th key={i} className="p-2 border-b font-medium text-gray-600 text-left">{h}</th>
+                                                ))}
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {bulkPreview.rows.map((row, i) => (
+                                                <tr key={i} className="border-b">
+                                                    {row.map((cell, j) => <td key={j} className="p-2 text-gray-500">{cell}</td>)}
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                    <div className="p-2 text-center text-gray-400 text-xs bg-gray-50">
+                                        ... y {Math.max(0, bulkPreview.totalRows - 5)} filas más
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                )}
             </div>
 
             {/* ── EDIT MODAL ───────────────────────────────────────────────────── */}

@@ -3,9 +3,9 @@ import { getDB, saveDB } from '@/lib/db';
 
 export async function GET(request) {
     const { searchParams } = new URL(request.url);
-    const month = searchParams.get('month'); // Format: YYYY-MM (backward compatibility)
-    const startDate = searchParams.get('startDate'); // Format: YYYY-MM-DD
-    const endDate = searchParams.get('endDate'); // Format: YYYY-MM-DD
+    const month = searchParams.get('month'); // Formato: YYYY-MM (compatibilidad hacia atrás)
+    const startDate = searchParams.get('startDate'); // Formato: YYYY-MM-DD
+    const endDate = searchParams.get('endDate'); // Formato: YYYY-MM-DD
     const db = getDB();
 
     let shifts = db.shifts;
@@ -24,11 +24,11 @@ export async function GET(request) {
 
 export async function POST(request) {
     try {
-        const { shifts } = await request.json(); // Array of shifts to update/add
+        const { shifts } = await request.json(); // Array de turnos para actualizar/añadir
         const db = getDB();
 
-        // Merge logic: Remove old shifts for the same employee/date and add new ones
-        // Or just update. For simplicity: Upsert.
+        // Lógica de fusión: Eliminar turnos antiguos para el mismo empleado/fecha y añadir los nuevos
+        // O simplemente actualizar. Por simplicidad: Upsert.
 
         shifts.forEach(newShift => {
             const index = db.shifts.findIndex(s =>

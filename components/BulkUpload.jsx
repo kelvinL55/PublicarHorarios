@@ -53,14 +53,14 @@ export default function BulkUpload() {
                 const worksheet = workbook.Sheets[sheetName];
                 const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 }); // Array of arrays
 
-                // Basic validation and preview logic
-                // Assuming Header Row: Name | Code | Date1 | Date2 ...
+                // Lógica básica de validación y previsualización
+                // Asumiendo Fila de Encabezado: Nombre | Código | Fecha1 | Fecha2 ...
                 if (jsonData.length < 2) throw new Error("Archivo vacío o formato incorrecto");
 
                 const headers = jsonData[0];
                 const rows = jsonData.slice(1);
 
-                // Simple preview limiting to 5 rows
+                // Previsualización simple limitada a 5 filas
                 setPreviewData({ headers, rows: rows.slice(0, 5), totalRows: rows.length });
             } catch (err) {
                 setMessage({ type: 'error', text: 'Error al leer el archivo. Verifica el formato.' });
@@ -75,8 +75,8 @@ export default function BulkUpload() {
         if (!file) return;
         setLoading(true);
 
-        // We need to parse fully here to send structured data to API
-        // Or send file to API. Client-side parsing is better for feedback.
+        // Necesitamos analizar completamente aquí para enviar datos estructurados a la API
+        // O enviar el archivo a la API. El análisis del lado del cliente es mejor para la retroalimentación.
 
         const reader = new FileReader();
         reader.onload = async (e) => {
@@ -86,30 +86,30 @@ export default function BulkUpload() {
                 const sheetName = workbook.SheetNames[0];
                 const worksheet = workbook.Sheets[sheetName];
 
-                // Parse with raw:false to get formatted dates if possible, or handle Excel dates
+                // Analizar con raw:false para obtener fechas formateadas si es posible, o manejar fechas de Excel
                 const jsonData = XLSX.utils.sheet_to_json(worksheet);
 
-                // Transform logic: 
-                // We expect columns like 'Code' (for ID) and Dates (YYYY-MM-DD or excel serials)
-                // This part requires strict template adherence.
-                // Let's assume the user downloads a template first.
+                // Lógica de transformación:
+                // Esperamos columnas como 'Código' (para ID) y Fechas (YYYY-MM-DD o series de excel)
+                // Esta parte requiere una estricta adherencia a la plantilla.
+                // Asumamos que el usuario descarga una plantilla primero.
 
-                // Simplified Logic: Send raw rows to API and let server match employees?
-                // Let's try to structure it here.
-                // Iterate keys of each row. if key is a date, that's a shift.
+                // Lógica Simplificada: ¿Enviar filas sin procesar a la API y dejar que el servidor empareje a los empleados?
+                // Intentemos estructurarlo aquí.
+                // Iterar las claves de cada fila. Si la clave es una fecha, es un turno.
 
                 const shifts = [];
 
                 jsonData.forEach(row => {
-                    const employeeCode = row['Código'] || row['Code']; // Critical field
+                    const employeeCode = row['Código'] || row['Code']; // Campo crítico
                     if (!employeeCode) return;
 
                     Object.keys(row).forEach(key => {
                         if (key === 'Nombre' || key === 'Name' || key === 'Código' || key === 'Code') return;
 
-                        // Assume key IS the date string YYYY-MM-DD
-                        // Excel might give 45678 (serial). 
-                        // We will assume simpler text dates for now or ISO strings.
+                        // Asumir que la clave ES la cadena de fecha YYYY-MM-DD
+                        // Excel podría dar 45678 (serial).
+                        // Asumiremos fechas de texto más simples por ahora o cadenas ISO.
                         const shiftType = row[key]; // M, T, N, L
                         if (shiftType) {
                             shifts.push({
@@ -121,7 +121,7 @@ export default function BulkUpload() {
                     });
                 });
 
-                // Send to API
+                // Enviar a la API
                 const res = await fetch('/api/shifts/bulk', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },

@@ -18,11 +18,11 @@ export async function POST(request) {
         }
 
         shifts.forEach(incomingShift => {
-            // Find employee by Code
+            // Buscar empleado por Código
             const employee = db.employees.find(e => String(e.code) === String(incomingShift.employeeCode));
 
             if (employee) {
-                // Upsert logic
+                // Lógica Upsert
                 const existingShiftIndex = db.shifts.findIndex(s =>
                     s.employeeId === employee.id && s.date === incomingShift.date
                 );

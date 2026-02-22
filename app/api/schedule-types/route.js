@@ -26,7 +26,7 @@ async function writeData(data) {
 
 export async function GET() {
     const data = await readData();
-    // Ensure default types if not present (migration fallback)
+    // Asegurar tipos predeterminados si no están presentes (fallback de migración)
     const scheduleTypes = data.scheduleTypes || [
         { code: 'M', label: 'Mañana', color: 'bg-yellow-100 text-yellow-800 border-yellow-300' },
         { code: 'T', label: 'Tarde', color: 'bg-orange-100 text-orange-800 border-orange-300' },
@@ -41,7 +41,7 @@ export async function POST(request) {
         const body = await request.json();
         const data = await readData();
 
-        // Body should be the new array of scheduleTypes
+        // El cuerpo debe ser el nuevo array de scheduleTypes
         if (Array.isArray(body)) {
             data.scheduleTypes = body;
             await writeData(data);

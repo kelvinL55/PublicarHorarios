@@ -3,14 +3,14 @@ import { getDB, saveDB } from '@/lib/db';
 
 export async function GET() {
     const db = getDB();
-    // Join users with employees to get full details
+    // Unir usuarios con empleados para obtener todos los detalles
     const usersWithDetails = db.users.map(user => {
         const employee = db.employees.find(e => e.id === user.employeeId);
         return {
             ...user,
             employeeName: employee ? employee.name : 'Sin Asignar',
             employeeCode: employee ? employee.code : 'N/A',
-            status: user.status || 'Active' // Default status
+            status: user.status || 'Active' // Estado por defecto
         };
     });
     return NextResponse.json(usersWithDetails);
@@ -27,10 +27,10 @@ export async function PUT(request) {
             return NextResponse.json({ success: false, message: 'Usuario no encontrado' }, { status: 404 });
         }
 
-        // Update User fields
+        // Actualizar campos del usuario
         db.users[userIndex] = { ...db.users[userIndex], ...updates };
 
-        // Also update related Employee fields if provided (name, code)
+        // También actualizar los campos relacionados del Empleado si se proveen (nombre, código)
         if (updates.employeeId && (updates.employeeName || updates.employeeCode)) {
             const empIndex = db.employees.findIndex(e => e.id === updates.employeeId);
             if (empIndex >= 0) {
@@ -49,7 +49,7 @@ export async function PUT(request) {
 export async function DELETE(request) {
     try {
         const { searchParams } = new URL(request.url);
-        const id = Number(searchParams.get('id')); // Convert to number if IDs are numbers
+        const id = Number(searchParams.get('id')); // Convertir a número si los IDs son números
 
         const db = getDB();
         const userIndex = db.users.findIndex(u => u.id === id);
@@ -58,15 +58,15 @@ export async function DELETE(request) {
             return NextResponse.json({ success: false, message: 'Usuario no encontrado' }, { status: 404 });
         }
 
-        // Instead of hard delete, we can toggle status or remove. 
-        // Requirement says "Delete/Archive". Let's remove for now as per "Delete" button implication, 
-        // or set status to 'Inactive'.
-        // Let's implement HARD DELETE for users, but keep employee records? 
-        // Or Soft Delete. Let's do Soft Delete (Status: Inactive) effectively.
-        // Actually, user asked for "Option to delete users". 
+        // En lugar de borrado físico, podemos cambiar el estado o eliminar.
+        // El requerimiento dice "Eliminar/Archivar". Eliminaremos por ahora según la implicación del botón "Eliminar",
+        // o pondremos el estado a 'Inactive'.
+        // Vamos a implementar BORRADO FÍSICO para usuarios, ¿pero mantener registros de empleados?
+        // O Borrado Lógico. Hagamos Borrado Lógico (Estado: Inactive) efectivamente.
+        // En realidad, el usuario pidió "Opción para eliminar usuarios".
 
-        // Let's remove the USER access, but keep the Employee record?
-        // If we delete the user from db.users, they can't login.
+        // ¿Vamos a eliminar el acceso de USUARIO, pero mantener el registro de Empleado?
+        // Si eliminamos al usuario de db.users, no podrá iniciar sesión.
         db.users.splice(userIndex, 1);
 
         saveDB(db);

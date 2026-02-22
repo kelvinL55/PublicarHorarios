@@ -8,7 +8,7 @@ export default function ScheduleConfigModal({ isOpen, onClose, scheduleTypes, on
     const [types, setTypes] = useState(scheduleTypes);
     const [saving, setSaving] = useState(false);
 
-    // Sync local state when prop changes or modal opens
+    // Sincronizar estado local cuando las props cambian o el modal se abre
     useEffect(() => {
         if (isOpen) {
             setTypes(scheduleTypes);
@@ -34,7 +34,7 @@ export default function ScheduleConfigModal({ isOpen, onClose, scheduleTypes, on
 
     const handleSave = async () => {
         setSaving(true);
-        // Basic validation
+        // Validación básica
         if (types.some(t => !t.code || !t.label)) {
             alert('Todos los campos son obligatorios');
             setSaving(false);
@@ -98,8 +98,8 @@ export default function ScheduleConfigModal({ isOpen, onClose, scheduleTypes, on
             const ws = wb.Sheets[wsname];
             const data = XLSX.utils.sheet_to_json(ws);
 
-            // Map standard colors for fallback if needed, or trust user input if it's a valid class
-            // Just simple mapping for now
+            // Mapear colores estándar como respaldo si es necesario, o confiar en la entrada del usuario si es una clase válida
+            // Mapeo simple por ahora
             const newTypes = data.map(row => ({
                 code: row.CODIGO ? String(row.CODIGO).toUpperCase().slice(0, 2) : '??',
                 label: row.DESCRIPCION || 'Sin descripción',
@@ -178,7 +178,7 @@ export default function ScheduleConfigModal({ isOpen, onClose, scheduleTypes, on
                                                 </option>
                                             ))}
                                         </select>
-                                        {/* Preview box */}
+                                        {/* Caja de previsualización */}
                                         <div className={`h-1 mt-1 rounded ${type.color.split(' ')[0]}`}></div>
                                     </td>
                                     <td className="py-2 text-right">
