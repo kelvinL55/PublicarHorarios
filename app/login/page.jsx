@@ -17,8 +17,7 @@ export default function LoginPage() {
     const [successMsg, setSuccessMsg] = useState('');
 
     // --- Login State ---
-    const [loginCode, setLoginCode] = useState('');
-    const [loginName, setLoginName] = useState('');
+    const [loginCredential, setLoginCredential] = useState('');
     const [loginPassword, setLoginPassword] = useState('');
     const [failedAttempts, setFailedAttempts] = useState(0);
     const [usersWithCodes, setUsersWithCodes] = useState([]); // [{ username, employeeCode }]
@@ -81,18 +80,7 @@ export default function LoginPage() {
         return () => clearTimeout(timer);
     }, [regCode, lookupEmployee]);
 
-    // ─── Login: autocomplete name from code and vice versa ────────────────────
-    const handleLoginCodeChange = (val) => {
-        setLoginCode(val);
-        const match = usersWithCodes.find(u => u.employeeCode === val);
-        if (match) setLoginName(match.username);
-    };
-
-    const handleLoginNameChange = (val) => {
-        setLoginName(val);
-        const match = usersWithCodes.find(u => u.username === val);
-        if (match) setLoginCode(match.employeeCode || '');
-    };
+    // ─── No need for separate autocompletes anymore, as the backend cross-references ───
 
     // ─── Login Submit ──────────────────────────────────────────────────────────
     const handleLogin = async (e) => {
@@ -100,7 +88,7 @@ export default function LoginPage() {
         if (failedAttempts >= MAX_ATTEMPTS) return;
         setLoading(true);
         setError('');
-        const res = await login(loginName, loginPassword);
+        const res = await login(loginCredential, loginPassword);
         if (!res.success) {
             const newAttempts = failedAttempts + 1;
             setFailedAttempts(newAttempts);
@@ -132,7 +120,8 @@ export default function LoginPage() {
             if (data.success) {
                 setSuccessMsg(`¡Cuenta creada para ${lookupResult.name}! Ya puedes iniciar sesión.`);
                 setIsLogin(true);
-                setLoginName(lookupResult.name);
+                // Pre-fill the credential with the code (or name)
+                setLoginCredential(regCode);
                 setLoginPassword('');
                 // refresh user list
                 fetch('/api/auth/users-with-codes')
@@ -269,44 +258,26 @@ export default function LoginPage() {
                                 </motion.div>
                             ) : (
                                 <form onSubmit={handleLogin} className="space-y-4">
-                                    {/* Código */}
+                                    {/* Nombre o Código */}
                                     <div className="space-y-1">
-                                        <label className="text-sm font-medium text-cookie-dark">Código de Empleado</label>
-                                        <div className="relative">
-                                            <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 text-cookie-brand h-5 w-5" />
-                                            <input
-                                                type="text"
-                                                value={loginCode}
-                                                onChange={e => handleLoginCodeChange(e.target.value)}
-                                                className="input-field !pl-12"
-                                                placeholder="Ej. 5890"
-                                                list="codes-list"
-                                            />
-                                            <datalist id="codes-list">
-                                                {usersWithCodes.filter(u => u.employeeCode).map((u, i) => (
-                                                    <option key={i} value={u.employeeCode} label={u.username} />
-                                                ))}
-                                            </datalist>
-                                        </div>
-                                    </div>
-
-                                    {/* Nombre */}
-                                    <div className="space-y-1">
-                                        <label className="text-sm font-medium text-cookie-dark">Nombre Completo</label>
+                                        <label className="text-sm font-medium text-cookie-dark">Nombre Completo o Código</label>
                                         <div className="relative">
                                             <User className="absolute left-3 top-1/2 -translate-y-1/2 text-cookie-brand h-5 w-5" />
                                             <input
                                                 type="text"
-                                                value={loginName}
-                                                onChange={e => handleLoginNameChange(e.target.value)}
+                                                value={loginCredential}
+                                                onChange={e => setLoginCredential(e.target.value)}
                                                 className="input-field !pl-12"
-                                                placeholder="Selecciona o escribe tu nombre..."
-                                                list="names-list"
+                                                placeholder="Ej. admin, EMP001, Juan Perez..."
+                                                list="credentials-list"
                                                 required
                                             />
-                                            <datalist id="names-list">
+                                            <datalist id="credentials-list">
                                                 {usersWithCodes.map((u, i) => (
-                                                    <option key={i} value={u.username} />
+                                                    <option key={i} value={u.username} label={u.employeeCode} />
+                                                ))}
+                                                {usersWithCodes.filter(u => u.employeeCode).map((u, i) => (
+                                                    <option key={`code-${i}`} value={u.employeeCode} label={u.username} />
                                                 ))}
                                             </datalist>
                                         </div>

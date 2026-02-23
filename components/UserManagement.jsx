@@ -41,37 +41,23 @@ export default function UserManagement() {
 
     // ─── Descarga de Plantilla Excel ──────────────────────────────────────────────
     const downloadTemplate = () => {
-        // Datos de muestra
+        // Datos de muestra sin campos repetidos ni contraseñas.
         const templateData = [
             {
-                "idEmpleado": "1001",
-                "Usuario": "juan.perez",
-                "Contraseña": "1234",
+                "CodigoEmpleado": "EMP001",
                 "Rol": "employee",
-                "NombresEmpleado": "Juan Pérez",
+                "NombreCompleto": "Juan Pérez",
                 "Cargo": "Operador",
-                "Estado": "Activo",
+                "Estado": "Active",
                 "FechaIngreso": "2023-01-15"
             },
             {
-                "idEmpleado": "1002",
-                "Usuario": "maria.gomez",
-                "Contraseña": "1234",
-                "Rol": "employee",
-                "NombresEmpleado": "María Gómez",
+                "CodigoEmpleado": "5890",
+                "Rol": "admin",
+                "NombreCompleto": "Teresa Suárez",
                 "Cargo": "Supervisor",
-                "Estado": "Activo",
+                "Estado": "Active",
                 "FechaIngreso": "2022-05-20"
-            },
-            {
-                "idEmpleado": "",
-                "Usuario": "nuevo.usuario",
-                "Contraseña": "1234",
-                "Rol": "employee",
-                "NombresEmpleado": "Nombre del Empleado",
-                "Cargo": "Cargo del Empleado",
-                "Estado": "Activo",
-                "FechaIngreso": "AAAA-MM-DD"
             }
         ];
 
@@ -79,12 +65,10 @@ export default function UserManagement() {
         const worksheet = XLSX.utils.json_to_sheet(templateData);
         // Ajustar ancho de las columnas
         const wscols = [
-            { wch: 15 }, // idEmpleado
-            { wch: 20 }, // Usuario
-            { wch: 15 }, // Contrasena
+            { wch: 20 }, // CodigoEmpleado
             { wch: 15 }, // Rol
-            { wch: 25 }, // NombresEmpleado
-            { wch: 15 }, // Cargo
+            { wch: 35 }, // NombreCompleto
+            { wch: 20 }, // Cargo
             { wch: 15 }, // Estado
             { wch: 20 }  // FechaIngreso
         ];
@@ -122,15 +106,13 @@ export default function UserManagement() {
 
                 // Process rawData into a more usable format for the payload
                 const processedData = rawData.map(row => ({
-                    employeeCode: String(row['idEmpleado'] || '').trim(),
-                    username: String(row['Usuario'] || '').trim(),
-                    password: String(row['Contraseña'] || '').trim() || '1234', // Default password if not provided
+                    employeeCode: String(row['CodigoEmpleado'] || '').trim(),
                     role: String(row['Rol'] || 'employee').trim().toLowerCase(),
-                    employeeName: String(row['NombresEmpleado'] || '').trim(),
+                    employeeName: String(row['NombreCompleto'] || '').trim(),
                     position: String(row['Cargo'] || '').trim(),
                     status: String(row['Estado'] || 'Active').trim(),
                     hireDate: String(row['FechaIngreso'] || '').trim(),
-                })).filter(u => u.username); // Only include rows with a username
+                })).filter(u => u.employeeCode && u.employeeName); // Only include rows with a code and name
 
                 setBulkData(processedData);
 
@@ -256,9 +238,8 @@ export default function UserManagement() {
                         <thead className="bg-gray-50/50 text-gray-600 border-b border-gray-200">
                             <tr>
                                 <th className="p-2 md:p-4 w-10 md:w-12 text-center">#</th>
-                                <th className="p-2 md:p-4">Usuario</th>
-                                <th className="p-2 md:p-4">Empleado</th>
-                                <th className="p-2 md:p-4">Rol</th>
+                                <th className="p-2 md:p-4">Colaborador / Empleado</th>
+                                <th className="p-2 md:p-4">Rol en Sistema</th>
                                 <th className="p-2 md:p-4">Estado</th>
                                 <th className="p-2 md:p-4 text-center">Acciones</th>
                             </tr>
@@ -267,12 +248,11 @@ export default function UserManagement() {
                             {users.map((user, index) => (
                                 <tr key={user.id} className="hover:bg-gray-50">
                                     <td className="p-2 md:p-4 text-center text-gray-400 font-mono text-[10px] md:text-xs">{index + 1}</td>
-                                    <td className="p-2 md:p-4 font-medium text-gray-900 text-sm md:text-base">{user.username}</td>
-                                    <td className="p-2 md:p-4 text-gray-600 text-xs md:text-sm">
-                                        <div className="truncate max-w-[120px] md:max-w-none">
-                                            {user.employeeName || 'Sin Asignar'}
+                                    <td className="p-2 md:p-4 text-gray-900 text-sm md:text-base font-medium">
+                                        <div className="truncate max-w-[200px] md:max-w-none">
+                                            {user.employeeName || (user.id === 1 ? 'Admin Global (Sin Empleado)' : user.username)}
                                         </div>
-                                        <span className="text-[10px] md:text-xs text-gray-400">({user.employeeCode})</span>
+                                        <span className="text-[10px] md:text-xs text-cookie-brand">({user.employeeCode || user.username || 'A-01'})</span>
                                     </td>
                                     <td className="p-2 md:p-4">
                                         <span className={`px-1.5 md:px-2 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs ${user.role === 'admin' ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700'}`}>
@@ -408,8 +388,10 @@ export default function UserManagement() {
                         <h3 className="text-lg font-bold mb-4">Editar Usuario</h3>
                         <div className="space-y-4">
                             <div>
-                                <label className="text-sm text-gray-500">Nombre de Usuario</label>
-                                <input className="input-field" value={editingUser.username} onChange={e => setEditingUser({ ...editingUser, username: e.target.value })} />
+                                <label className="text-sm text-gray-500">
+                                    {editingUser.employeeId ? 'Identificador Alterno' : 'Nombre de Usuario'}
+                                </label>
+                                <input className="input-field" disabled={!!editingUser.employeeId} value={editingUser.username || ''} onChange={e => setEditingUser({ ...editingUser, username: e.target.value })} title={editingUser.employeeId ? "Los usuarios asignados a un empleado usan su Código de Empleado y Nombre Completo como identificador visual" : ""} />
                             </div>
                             <div>
                                 <label className="text-sm text-gray-500">Rol</label>

@@ -477,14 +477,6 @@
       "role": "employee",
       "status": "Active",
       "employeeId": 1770862779054
-    },
-    {
-      "id": 1770862660149,
-      "username": "Karen loaiza",
-      "password": "1234",
-      "role": "employee",
-      "status": "Active",
-      "employeeId": null
     }
   ],
   "employees": [
@@ -872,6 +864,13 @@
       "code": "EMP1770862779054",
       "joinDate": "2024-01-08",
       "role": "Mantenimiento"
+    },
+    {
+      "id": 1771805838053,
+      "name": "Karen Loaiza",
+      "code": "1994",
+      "joinDate": "2026-02-23",
+      "role": "Empleado"
     }
   ],
   "shifts": [
@@ -9399,6 +9398,161 @@
       "employeeId": 1770862779054,
       "date": "2026-02-26",
       "type": "M"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-01-27",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-01-28",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-01-29",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-01-30",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-01-31",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-01",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-02",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-03",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-04",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-05",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-06",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-07",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-08",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-09",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-10",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-11",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-12",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-13",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-14",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-15",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-16",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-17",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-18",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-19",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-20",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-21",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-22",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-23",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-24",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-25",
+      "type": "K"
+    },
+    {
+      "employeeId": 1771805838053,
+      "date": "2026-02-26",
+      "type": "K"
     }
   ]
 }
